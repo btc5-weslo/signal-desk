@@ -26,3 +26,22 @@ def test_scheduler_is_off_by_default():
     s = Settings(env="dev")
     assert s.inprocess_scheduler is False
     assert s.scheduler_interval_sec == 60
+
+
+def test_loop_broadcaster_publishes_on_the_owning_loop():
+    seen = []
+
+    class B:
+        async def publish(self, signal, *, tenant_id):
+            seen.append((signal, tenant_id, asyncio.get_running_loop()))
+            return 1
+
+    async def run():
+        loop = asyncio.get_running_loop()
+        lb = main._LoopBroadcaster(B(), loop)
+        fut = await asyncio.to_thread(lb.publish, "sig", tenant_id=None)
+        assert await asyncio.wrap_future(fut) == 1
+        return loop
+
+    loop = asyncio.run(run())
+    assert seen == [("sig", None, loop)]

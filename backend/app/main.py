@@ -39,6 +39,19 @@ async def lifespan(app: FastAPI):
         await broadcaster.stop()
 
 
+class _LoopBroadcaster:
+    """Lets the pipeline thread publish through the event loop's broadcaster."""
+
+    def __init__(self, broadcaster, loop: asyncio.AbstractEventLoop):
+        self._b = broadcaster
+        self._loop = loop
+
+    def publish(self, signal, *, tenant_id):
+        return asyncio.run_coroutine_threadsafe(
+            self._b.publish(signal, tenant_id=tenant_id), self._loop,
+        )
+
+
 async def _pipeline_loop(s: Settings) -> None:
     """Top up the newest bars, then run the same pass as the arq `scan_pipeline` cron.
 
@@ -52,6 +65,7 @@ async def _pipeline_loop(s: Settings) -> None:
     from app.pipeline.topup import topup_store
 
     log = logging.getLogger("app.pipeline.inprocess")
+    loop = asyncio.get_running_loop()
     await asyncio.sleep(s.inprocess_first_delay_s)
     while True:
         t0 = time.monotonic()
@@ -60,7 +74,12 @@ async def _pipeline_loop(s: Settings) -> None:
                 topup_store, list(s.pipeline_symbols), list(s.pipeline_timeframes),
                 data_dir=s.data_dir,
             )
-            result = run_pipeline(repo=get_repo(), settings=s, broadcaster=get_broadcaster())
+            # Off the event loop so requests are served during a pass; fan-out
+            # is handed back to the loop that owns the broadcaster.
+            result = await asyncio.to_thread(
+                run_pipeline, repo=get_repo(), settings=s,
+                broadcaster=_LoopBroadcaster(get_broadcaster(), loop),
+            )
             log.warning("cycle %.1fs topup=%s pipeline=%s", time.monotonic() - t0, top, result)
         except Exception:  # logged with traceback; the next cycle retries
             log.exception("in-process cycle failed")
