@@ -1,0 +1,47 @@
+{
+  "description": "Canonical v1 symbols used in the store, signals, and API. No slashes.",
+  "symbols": [
+    "BTC-USDT",
+    "ETH-USDT",
+    "SOL-USDT",
+    "BNB-USDT",
+    "XRP-USDT",
+    "SPY",
+    "QQQ",
+    "AAPL",
+    "MSFT",
+    "NVDA",
+    "TSLA",
+    "AMZN",
+    "META",
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "AUDUSD"
+  ],
+  "asset_classes": {
+    "crypto": [
+      "BTC-USDT",
+      "ETH-USDT",
+      "SOL-USDT",
+      "BNB-USDT",
+      "XRP-USDT"
+    ],
+    "equity": [
+      "SPY",
+      "QQQ",
+      "AAPL",
+      "MSFT",
+      "NVDA",
+      "TSLA",
+      "AMZN",
+      "META"
+    ],
+    "fx": [
+      "EURUSD",
+      "GBPUSD",
+      "USDJPY",
+      "AUDUSD"
+    ]
+  }
+}

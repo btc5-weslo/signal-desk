@@ -1,0 +1,4 @@
+# QA-owned. Format: path | exact stripped line text | reason
+# Each entry exempts exactly one line in one file. Unused entries fail the scan.
+backend/app/services/claims.py | """Tagline contains a banned claim or product-pricing phrase.""" | docstring of the banned-claims guard itself; describes what it blocks
+backend/tests/test_disclaimer_drift.py | assert _DISCLAIMERS.is_file(), "qa/DISCLAIMERS.md is missing from the repo checkout" | test assertion message ("checkout" = git checkout, not payment)

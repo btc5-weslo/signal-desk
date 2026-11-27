@@ -1,0 +1,35 @@
+[project]
+name = "signal-quant"
+version = "0.1.0"
+description = "Quant signal engine (v0) for the Signal app: features, strategies, labeling, walk-forward."
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.6",
+  "pandas>=2.0",
+  "numpy>=1.26",
+  "scikit-learn>=1.4",
+  "signal-shared",
+  "pyarrow>=26.0.1",
+]
+
+[project.optional-dependencies]
+ml = ["lightgbm>=4.0", "polars>=1.0"]
+dev = ["pytest>=8.0", "ruff>=0.4"]
+
+[tool.uv.sources]
+signal-shared = { path = "../shared", editable = true }
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["signal_quant*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "../data/src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100

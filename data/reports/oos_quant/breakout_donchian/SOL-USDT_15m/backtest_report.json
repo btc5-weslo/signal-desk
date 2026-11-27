@@ -1,0 +1,230 @@
+{
+  "strategy_id": "breakout_donchian",
+  "version": "0.1.0",
+  "period": {
+    "start": "2024-03-23T14:00:00Z",
+    "end": "2026-09-09T14:00:00Z"
+  },
+  "oos_windows": [
+    {
+      "train_start": "2023-03-24T14:00:00Z",
+      "train_end": "2024-03-23T14:00:00Z",
+      "test_start": "2024-03-23T14:00:00Z",
+      "test_end": "2024-09-19T14:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -2.0049853687209156,
+        "sortino": -0.1719858121868041,
+        "max_drawdown": -0.03263503146900937,
+        "avg_R": -1.1812180779827148,
+        "exposure": 0.0012140131807145335
+      }
+    },
+    {
+      "train_start": "2023-09-20T14:00:00Z",
+      "train_end": "2024-09-19T14:00:00Z",
+      "test_start": "2024-09-19T14:00:00Z",
+      "test_end": "2025-03-18T14:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.697432794606264,
+        "sortino": -0.024013389360925442,
+        "max_drawdown": -0.002979147751162814,
+        "avg_R": -0.13685038743227645,
+        "exposure": 0.0019655451497282922
+      }
+    },
+    {
+      "train_start": "2024-03-18T14:00:00Z",
+      "train_end": "2025-03-18T14:00:00Z",
+      "test_start": "2025-03-18T14:00:00Z",
+      "test_end": "2025-09-14T14:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.9513263467245126,
+        "sortino": -0.0604465124172655,
+        "max_drawdown": -0.014182557701688081,
+        "avg_R": -0.7510136285801869,
+        "exposure": 0.0019655451497282922
+      }
+    },
+    {
+      "train_start": "2024-09-14T14:00:00Z",
+      "train_end": "2025-09-14T14:00:00Z",
+      "test_start": "2025-09-14T14:00:00Z",
+      "test_end": "2026-03-13T14:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -2.012547731894689,
+        "sortino": -0.8073979154788702,
+        "max_drawdown": -0.025844030518190397,
+        "avg_R": -1.2380881835491375,
+        "exposure": 0.0007515319690137588
+      }
+    },
+    {
+      "train_start": "2025-03-13T14:00:00Z",
+      "train_end": "2026-03-13T14:00:00Z",
+      "test_start": "2026-03-13T14:00:00Z",
+      "test_end": "2026-09-09T14:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.6678475432392632,
+        "sortino": -0.022651174890802307,
+        "max_drawdown": -0.018462464060741035,
+        "avg_R": -0.7316852917773804,
+        "exposure": 0.0012140131807145335
+      }
+    }
+  ],
+  "trades": [
+    {
+      "symbol": "SOL-USDT",
+      "side": "long",
+      "entry_time": "2024-03-23T14:45:00Z",
+      "exit_time": "2024-03-23T15:30:00Z",
+      "entry_price": 177.92892,
+      "exit_price": 175.09420553183398,
+      "exit_reason": "sl",
+      "r_multiple": -1.160391046317113,
+      "bars_held": 3,
+      "net_return": -0.017915792405741916
+    },
+    {
+      "symbol": "SOL-USDT",
+      "side": "short",
+      "entry_time": "2024-03-23T20:30:00Z",
+      "exit_time": "2024-03-24T00:30:00Z",
+      "entry_price": 173.583165,
+      "exit_price": 175.83536869303276,
+      "exit_reason": "sl",
+      "r_multiple": -1.202045109648317,
+      "bars_held": 16,
+      "net_return": -0.014987756599125192
+    },
+    {
+      "symbol": "SOL-USDT",
+      "side": "long",
+      "entry_time": "2024-09-19T16:00:00Z",
+      "exit_time": "2024-09-19T20:00:00Z",
+      "entry_price": 143.03148,
+      "exit_price": 142.96848,
+      "exit_reason": "timeout",
+      "r_multiple": -0.2190245737971954,
+      "bars_held": 16,
+      "net_return": -0.002440022014734017
+    },
+    {
+      "symbol": "SOL-USDT",
+      "side": "short",
+      "entry_time": "2024-09-19T21:45:00Z",
+      "exit_time": "2024-09-20T01:45:00Z",
+      "entry_price": 142.42875,
+      "exit_price": 142.22107499999998,
+      "exit_reason": "timeout",
+      "r_multiple": -0.054676201067357495,
+      "bars_held": 16,
+      "net_return": -0.0005404444327425247
+    },
+    {
+      "symbol": "SOL-USDT",
+      "side": "long",
+      "entry_time": "2025-03-18T23:00:00Z",
+      "exit_time": "2025-03-19T03:00:00Z",
+      "entry_price": 125.08250999999998,
+      "exit_price": 124.667635,
+      "exit_reason": "timeout",
+      "r_multiple": -0.5871885338590941,
+      "bars_held": 16,
+      "net_return": -0.005313493828993205
+    },
+    {
+      "symbol": "SOL-USDT",
+      "side": "long",
+      "entry_time": "2025-03-19T04:00:00Z",
+      "exit_time": "2025-03-19T08:00:00Z",
+      "entry_price": 126.54324,
+      "exit_price": 125.66713500000002,
+      "exit_reason": "timeout",
+      "r_multiple": -0.9148387233012799,
+      "bars_held": 16,
+      "net_return": -0.008916441328671379
+    },
+    {
+      "symbol": "SOL-USDT",
+      "side": "short",
+      "entry_time": "2025-09-14T14:30:00Z",
+      "exit_time": "2025-09-14T16:15:00Z",
+      "entry_price": 242.748565,
+      "exit_price": 245.35793560990547,
+      "exit_reason": "sl",
+      "r_multiple": -1.245591006278675,
+      "bars_held": 7,
+      "net_return": -0.012760022332224124
+    },
+    {
+      "symbol": "SOL-USDT",
+      "side": "long",
+      "entry_time": "2025-09-14T18:00:00Z",
+      "exit_time": "2025-09-14T19:00:00Z",
+      "entry_price": 248.053965,
+      "exit_price": 245.25979021946492,
+      "exit_reason": "sl",
+      "r_multiple": -1.2305853608195998,
+      "bars_held": 4,
+      "net_return": -0.013253118271076829
+    },
+    {
+      "symbol": "SOL-USDT",
+      "side": "long",
+      "entry_time": "2026-03-13T14:15:00Z",
+      "exit_time": "2026-03-13T15:00:00Z",
+      "entry_price": 92.496225,
+      "exit_price": 91.24558075387047,
+      "exit_reason": "sl",
+      "r_multiple": -1.1903632192316969,
+      "bars_held": 3,
+      "net_return": -0.01550750911059771
+    },
+    {
+      "symbol": "SOL-USDT",
+      "side": "short",
+      "entry_time": "2026-03-13T22:15:00Z",
+      "exit_time": "2026-03-14T02:15:00Z",
+      "entry_price": 88.16589499999999,
+      "exit_price": 88.254105,
+      "exit_reason": "timeout",
+      "r_multiple": -0.27300736432306405,
+      "bars_held": 16,
+      "net_return": -0.0030015007503752297
+    }
+  ],
+  "trade_count": 10,
+  "win_rate": 0.0,
+  "profit_factor": 0.0,
+  "sharpe": -1.7063646829321328,
+  "sortino": -0.03278786725075893,
+  "max_drawdown": -0.0908689216264621,
+  "avg_R": -0.8077711138643393,
+  "exposure": 0.0014236111111111112,
+  "fees_bps": 10.0,
+  "slippage_bps": 5.0,
+  "run_id": "80786339cd88b624",
+  "data_hash": "7f87eb28d850d7b00d69339931da5548ec8930241ff30112ca444979c737d467",
+  "symbol": "SOL-USDT",
+  "timeframe": "15m",
+  "flags": [
+    "low_oos_trades",
+    "data_quality_warning"
+  ]
+}

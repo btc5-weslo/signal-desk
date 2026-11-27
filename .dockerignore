@@ -1,0 +1,23 @@
+# Keep the API image small and free of local state or secrets.
+**/.env
+**/.env.*
+**/.venv
+**/node_modules
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+**/*.egg-info
+web/
+data/store/
+data/staging/
+data/backups/
+data/vision_cache/
+data/catalog/
+data/tracker/
+data/reports/
+quant/reports/
+**/*.parquet
+**/*.duckdb*
+**/*.db
+**/*.log
+.git

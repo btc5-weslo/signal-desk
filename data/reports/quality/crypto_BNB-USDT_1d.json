@@ -1,0 +1,56 @@
+{
+  "symbol": "BNB-USDT",
+  "asset_class": "crypto",
+  "timeframe": "1d",
+  "source": "ccxt:binanceus",
+  "start": "2019-09-23T00:00:00Z",
+  "end": "2026-11-26T00:00:00Z",
+  "n_bars": 2621,
+  "n_duplicates_removed": 0,
+  "n_bad_ticks_dropped": 0,
+  "n_outliers_flagged": 12,
+  "n_zero_volume": 0,
+  "n_gaps_unexpected": 0,
+  "n_gaps_calendar": 0,
+  "missing_pct_estimate": 0.0,
+  "history_limitations": [],
+  "bad_tick_times": [],
+  "outlier_times": [
+    "2019-09-24T00:00:00Z",
+    "2020-03-12T00:00:00Z",
+    "2021-02-05T00:00:00Z",
+    "2021-02-09T00:00:00Z",
+    "2021-02-17T00:00:00Z",
+    "2021-02-19T00:00:00Z",
+    "2021-02-20T00:00:00Z",
+    "2021-03-01T00:00:00Z",
+    "2021-03-09T00:00:00Z",
+    "2021-05-19T00:00:00Z",
+    "2021-05-24T00:00:00Z",
+    "2021-06-21T00:00:00Z"
+  ],
+  "gaps": [],
+  "fetch_attempts": [
+    {
+      "source": "ccxt:binance",
+      "ok": false,
+      "bars": 0,
+      "error": "skipped (earlier failure in this process, e.g. geo-block)",
+      "notes": []
+    },
+    {
+      "source": "ccxt:binanceus",
+      "ok": true,
+      "bars": 2622,
+      "error": null,
+      "notes": []
+    }
+  ],
+  "warnings": [
+    "dropped 1 still-forming bar(s) (close_time > as_of)",
+    "flagged 12 statistical outlier bar(s); prices kept as published"
+  ],
+  "errors": [],
+  "dropped_forming_bars": 1,
+  "cleaned_at": "2026-11-26T04:18:51.681996Z"
+}

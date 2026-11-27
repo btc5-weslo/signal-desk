@@ -1,0 +1,14 @@
+{
+  "fees_bps": 10.0,
+  "slippage_bps": 5.0,
+  "train_days": 365,
+  "test_days": 180,
+  "step_days": 180,
+  "train_bars": 365,
+  "test_bars": 180,
+  "params": "published_defaults",
+  "symbol": "SOL-USDT",
+  "timeframe": "1d",
+  "n_windows": 10,
+  "oos_bar_count": 1800
+}

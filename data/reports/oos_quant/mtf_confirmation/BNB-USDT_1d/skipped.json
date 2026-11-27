@@ -1,0 +1,8 @@
+{
+  "status": "skipped_unsupported",
+  "strategy_id": "mtf_confirmation",
+  "version": "0.1.0",
+  "symbol": "BNB-USDT",
+  "timeframe": "1d",
+  "reason": "mtf_confirmation.supported does not include (crypto, 1d); 1d has no higher timeframe in the locked universe."
+}

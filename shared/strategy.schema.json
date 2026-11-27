@@ -1,0 +1,98 @@
+{
+  "$defs": {
+    "AssetClass": {
+      "enum": [
+        "crypto",
+        "equity",
+        "fx"
+      ],
+      "title": "AssetClass",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Description"
+    },
+    "hypothesis": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Hypothesis"
+    },
+    "hypothesis_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Hypothesis Id"
+    },
+    "asset_classes": {
+      "items": {
+        "$ref": "#/$defs/AssetClass"
+      },
+      "title": "Asset Classes",
+      "type": "array"
+    },
+    "timeframes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Timeframes",
+      "type": "array"
+    },
+    "latest_run_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Latest Run Id"
+    }
+  },
+  "required": [
+    "id",
+    "version",
+    "name",
+    "asset_classes",
+    "timeframes"
+  ],
+  "title": "Strategy",
+  "type": "object"
+}

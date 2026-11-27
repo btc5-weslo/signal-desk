@@ -1,0 +1,82 @@
+{
+  "$defs": {
+    "BacktestFlag": {
+      "enum": [
+        "low_oos_trades",
+        "sharpe_gt_3",
+        "win_rate_gt_75",
+        "metric_recompute_mismatch",
+        "insufficient_oos_history",
+        "data_quality_warning",
+        "metric_undefined"
+      ],
+      "title": "BacktestFlag",
+      "type": "string"
+    },
+    "BacktestIndexItem": {
+      "additionalProperties": false,
+      "description": "One per-market backtest in the index. Metrics live on GET /v1/backtests/{run_id}.",
+      "properties": {
+        "symbol": {
+          "title": "Symbol",
+          "type": "string"
+        },
+        "timeframe": {
+          "title": "Timeframe",
+          "type": "string"
+        },
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "flags": {
+          "items": {
+            "$ref": "#/$defs/BacktestFlag"
+          },
+          "title": "Flags",
+          "type": "array"
+        },
+        "approved": {
+          "title": "Approved",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "symbol",
+        "timeframe",
+        "run_id",
+        "flags",
+        "approved"
+      ],
+      "title": "BacktestIndexItem",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "items": {
+      "items": {
+        "$ref": "#/$defs/BacktestIndexItem"
+      },
+      "title": "BacktestIndexItems",
+      "type": "array"
+    },
+    "next_cursor": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Next Cursor"
+    }
+  },
+  "required": [
+    "items"
+  ],
+  "title": "BacktestIndexPage",
+  "type": "object"
+}

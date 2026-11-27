@@ -1,0 +1,350 @@
+{
+  "strategy_id": "trend_ema_adx",
+  "version": "0.1.0",
+  "period": {
+    "start": "2022-08-13T08:00:00Z",
+    "end": "2026-07-23T10:00:00Z"
+  },
+  "oos_windows": [
+    {
+      "train_start": "2021-08-13T06:00:00Z",
+      "train_end": "2022-08-13T08:00:00Z",
+      "test_start": "2022-08-13T08:00:00Z",
+      "test_end": "2023-02-09T08:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.527556036229263,
+        "sortino": -0.03568925007076629,
+        "max_drawdown": -0.01957736403889332,
+        "avg_R": -0.6229746826133232,
+        "exposure": 0.006915629322268326
+      }
+    },
+    {
+      "train_start": "2022-02-09T08:00:00Z",
+      "train_end": "2023-02-09T08:00:00Z",
+      "test_start": "2023-02-09T08:00:00Z",
+      "test_end": "2023-08-08T10:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.989515032575717,
+        "sortino": -0.21154718176780707,
+        "max_drawdown": -0.04123220996072474,
+        "avg_R": -1.1402080038670572,
+        "exposure": 0.002074688796680498
+      }
+    },
+    {
+      "train_start": "2022-08-08T08:00:00Z",
+      "train_end": "2023-08-08T10:00:00Z",
+      "test_start": "2023-08-08T10:00:00Z",
+      "test_end": "2024-02-04T10:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 1.0,
+        "profit_factor": 1000000.0,
+        "sharpe": 1.54037567065341,
+        "sortino": 615117877.0500954,
+        "max_drawdown": 0.0,
+        "avg_R": 0.7137559576121375,
+        "exposure": 0.004840940525587829
+      }
+    },
+    {
+      "train_start": "2023-02-04T08:00:00Z",
+      "train_end": "2024-02-04T10:00:00Z",
+      "test_start": "2024-02-04T10:00:00Z",
+      "test_end": "2024-08-02T10:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 0.9560120795739617,
+        "sharpe": -0.04518293339105047,
+        "sortino": 0.0,
+        "max_drawdown": -0.017364576925422592,
+        "avg_R": 0.04278787686310204,
+        "exposure": 0.004149377593360996
+      }
+    },
+    {
+      "train_start": "2023-08-03T10:00:00Z",
+      "train_end": "2024-08-02T10:00:00Z",
+      "test_start": "2024-08-02T10:00:00Z",
+      "test_end": "2025-01-29T10:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 1.67168873436129,
+        "sharpe": 0.4900061524555082,
+        "sortino": 0.0,
+        "max_drawdown": -0.028154110970386337,
+        "avg_R": 0.3350563108182651,
+        "exposure": 0.005071461502996773
+      }
+    },
+    {
+      "train_start": "2024-01-30T10:00:00Z",
+      "train_end": "2025-01-29T10:00:00Z",
+      "test_start": "2025-01-29T10:00:00Z",
+      "test_end": "2025-07-28T10:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 1.0,
+        "profit_factor": 1000000.0,
+        "sharpe": 2.006534145149215,
+        "sortino": 1058066881.9159843,
+        "max_drawdown": 0.0,
+        "avg_R": 1.3270845946800112,
+        "exposure": 0.005532503457814661
+      }
+    },
+    {
+      "train_start": "2024-07-28T10:00:00Z",
+      "train_end": "2025-07-28T10:00:00Z",
+      "test_start": "2025-07-28T10:00:00Z",
+      "test_end": "2026-01-24T10:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.6510487209878255,
+        "sortino": -0.04395781698333456,
+        "max_drawdown": -0.028421540500328524,
+        "avg_R": -0.6490818440367172,
+        "exposure": 0.005071461502996773
+      }
+    },
+    {
+      "train_start": "2025-01-24T10:00:00Z",
+      "train_end": "2026-01-24T10:00:00Z",
+      "test_start": "2026-01-24T10:00:00Z",
+      "test_end": "2026-07-23T10:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 1.0058892805974555,
+        "sharpe": 0.005900321604112643,
+        "sortino": 0.0,
+        "max_drawdown": -0.0103288729706279,
+        "avg_R": -0.08891099633135724,
+        "exposure": 0.0025357307514983865
+      }
+    }
+  ],
+  "trades": [
+    {
+      "symbol": "XRP-USDT",
+      "side": "long",
+      "entry_time": "2022-08-13T09:00:00Z",
+      "exit_time": "2022-08-14T01:00:00Z",
+      "entry_price": 0.37948965,
+      "exit_price": 0.37971005,
+      "exit_reason": "timeout",
+      "r_multiple": -0.08832038467392406,
+      "bars_held": 16,
+      "net_return": -0.001419800777175321
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "long",
+      "entry_time": "2022-08-14T05:00:00Z",
+      "exit_time": "2022-08-14T17:00:00Z",
+      "entry_price": 0.38449215,
+      "exit_price": 0.378263538803407,
+      "exit_reason": "sl",
+      "r_multiple": -1.1576289805527225,
+      "bars_held": 12,
+      "net_return": -0.018183380038828793
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "short",
+      "entry_time": "2023-02-09T09:00:00Z",
+      "exit_time": "2023-02-09T15:00:00Z",
+      "entry_price": 0.3926036,
+      "exit_price": 0.3988098017932725,
+      "exit_reason": "sl",
+      "r_multiple": -1.1649302002529769,
+      "bars_held": 6,
+      "net_return": -0.017823614442317386
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "long",
+      "entry_time": "2023-02-09T19:00:00Z",
+      "exit_time": "2023-02-09T20:00:00Z",
+      "entry_price": 0.40430204999999997,
+      "exit_price": 0.3954659284428385,
+      "exit_reason": "sl",
+      "r_multiple": -1.1154858074811378,
+      "bars_held": 1,
+      "net_return": -0.023833392721120998
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "long",
+      "entry_time": "2023-08-08T18:00:00Z",
+      "exit_time": "2023-08-09T10:00:00Z",
+      "entry_price": 0.6400198500000001,
+      "exit_price": 0.64277845,
+      "exit_reason": "timeout",
+      "r_multiple": 0.11165382636129192,
+      "bars_held": 16,
+      "net_return": 0.002305868638292928
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "long",
+      "entry_time": "2023-08-09T10:00:00Z",
+      "exit_time": "2023-08-09T14:00:00Z",
+      "entry_price": 0.6435215999999999,
+      "exit_price": 0.661685444244,
+      "exit_reason": "tp",
+      "r_multiple": 1.3158580888629832,
+      "bars_held": 4,
+      "net_return": 0.026197469051164848
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "short",
+      "entry_time": "2024-02-04T21:00:00Z",
+      "exit_time": "2024-02-05T02:00:00Z",
+      "entry_price": 0.5083457000000001,
+      "exit_price": 0.498899537274,
+      "exit_reason": "tp",
+      "r_multiple": 1.2555530459827648,
+      "bars_held": 5,
+      "net_return": 0.01660074529739531
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "short",
+      "entry_time": "2024-02-05T02:00:00Z",
+      "exit_time": "2024-02-05T14:00:00Z",
+      "entry_price": 0.5003497000000001,
+      "exit_price": 0.5080296814737885,
+      "exit_reason": "sl",
+      "r_multiple": -1.1699772922565608,
+      "bars_held": 12,
+      "net_return": -0.01736457692542262
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "short",
+      "entry_time": "2024-08-02T11:00:00Z",
+      "exit_time": "2024-08-02T16:00:00Z",
+      "entry_price": 0.5763117,
+      "exit_price": 0.548063266663,
+      "exit_reason": "tp",
+      "r_multiple": 1.3924443775943949,
+      "bars_held": 5,
+      "net_return": 0.04706491013515256
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "short",
+      "entry_time": "2024-08-02T16:00:00Z",
+      "exit_time": "2024-08-03T08:00:00Z",
+      "entry_price": 0.56141915,
+      "exit_price": 0.5760879,
+      "exit_reason": "timeout",
+      "r_multiple": -0.7223317559578647,
+      "bars_held": 16,
+      "net_return": -0.028154110970386403
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "short",
+      "entry_time": "2025-02-01T00:00:00Z",
+      "exit_time": "2025-02-01T10:00:00Z",
+      "entry_price": 3.0345819499999998,
+      "exit_price": 2.958647537661,
+      "exit_reason": "tp",
+      "r_multiple": 1.3158457678021882,
+      "bars_held": 10,
+      "net_return": 0.02304804549810842
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "short",
+      "entry_time": "2025-02-01T10:00:00Z",
+      "exit_time": "2025-02-01T23:00:00Z",
+      "entry_price": 2.9737124,
+      "exit_price": 2.890589066495,
+      "exit_reason": "tp",
+      "r_multiple": 1.3383234215578341,
+      "bars_held": 13,
+      "net_return": 0.025980667141350024
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "long",
+      "entry_time": "2025-07-28T11:00:00Z",
+      "exit_time": "2025-07-28T15:00:00Z",
+      "entry_price": 3.24051945,
+      "exit_price": 3.1686167372369223,
+      "exit_reason": "sl",
+      "r_multiple": -1.1136875513356477,
+      "bars_held": 4,
+      "net_return": -0.024166449286491556
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "short",
+      "entry_time": "2025-07-28T17:00:00Z",
+      "exit_time": "2025-07-29T09:00:00Z",
+      "entry_price": 3.1689147500000003,
+      "exit_price": 3.1763874,
+      "exit_reason": "timeout",
+      "r_multiple": -0.18447613673778682,
+      "bars_held": 16,
+      "net_return": -0.004360468248632919
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "short",
+      "entry_time": "2026-01-25T07:00:00Z",
+      "exit_time": "2026-01-25T11:00:00Z",
+      "entry_price": 1.8973508500000003,
+      "exit_price": 1.9131378572031599,
+      "exit_reason": "sl",
+      "r_multiple": -1.3213948138818086,
+      "bars_held": 4,
+      "net_return": -0.01032887297062785
+    },
+    {
+      "symbol": "XRP-USDT",
+      "side": "short",
+      "entry_time": "2026-01-25T11:00:00Z",
+      "exit_time": "2026-01-25T17:00:00Z",
+      "entry_price": 1.90654625,
+      "exit_price": 1.882948306909,
+      "exit_reason": "tp",
+      "r_multiple": 1.143572821219094,
+      "bars_held": 6,
+      "net_return": 0.010389702601807351
+    }
+  ],
+  "trade_count": 16,
+  "win_rate": 0.4375,
+  "profit_factor": 1.040874484971142,
+  "sharpe": 0.034562887609940016,
+  "sortino": 0.001767372405976821,
+  "max_drawdown": -0.060002356015088854,
+  "avg_R": -0.010311348359367409,
+  "exposure": 0.004542824074074074,
+  "fees_bps": 10.0,
+  "slippage_bps": 5.0,
+  "run_id": "857df46a956f762f",
+  "data_hash": "339f89b040b87ced39f3982c2577210e242b310dc31906787a34b9e7fee3e12c",
+  "symbol": "XRP-USDT",
+  "timeframe": "1h",
+  "flags": [
+    "low_oos_trades",
+    "data_quality_warning"
+  ]
+}

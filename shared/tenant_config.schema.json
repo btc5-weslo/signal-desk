@@ -1,0 +1,67 @@
+{
+  "additionalProperties": false,
+  "description": "Public white-label config resolved from the request Host header.",
+  "properties": {
+    "tenant_id": {
+      "title": "Tenant Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "logo_url": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Logo Url"
+    },
+    "colors": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Colors",
+      "type": "object"
+    },
+    "extra_disclaimers": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Extra Disclaimers",
+      "type": "array"
+    },
+    "tagline": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tagline"
+    },
+    "licensed_data_sources": {
+      "description": "Platform licensed data sources. Read-only output; tenants cannot set this.",
+      "items": {
+        "type": "string"
+      },
+      "readOnly": true,
+      "title": "Licensed Data Sources",
+      "type": "array"
+    }
+  },
+  "required": [
+    "tenant_id",
+    "name"
+  ],
+  "title": "TenantConfig",
+  "type": "object"
+}

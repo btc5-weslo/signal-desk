@@ -1,0 +1,120 @@
+{
+  "symbol": "SOL-USDT",
+  "asset_class": "crypto",
+  "timeframe": "1h",
+  "source": "ccxt:binanceus",
+  "start": "2020-09-18T13:00:00Z",
+  "end": "2026-11-26T04:00:00Z",
+  "n_bars": 54205,
+  "n_duplicates_removed": 0,
+  "n_bad_ticks_dropped": 0,
+  "n_outliers_flagged": 252,
+  "n_zero_volume": 729,
+  "n_gaps_unexpected": 4,
+  "n_gaps_calendar": 0,
+  "missing_pct_estimate": 0.0004794305839833646,
+  "history_limitations": [],
+  "bad_tick_times": [],
+  "outlier_times": [
+    "2020-09-18T19:00:00Z",
+    "2020-09-21T10:00:00Z",
+    "2020-09-24T16:00:00Z",
+    "2020-10-01T16:00:00Z",
+    "2020-10-02T05:00:00Z",
+    "2020-10-26T16:00:00Z",
+    "2020-11-05T15:00:00Z",
+    "2020-11-07T01:00:00Z",
+    "2020-11-07T04:00:00Z",
+    "2020-11-07T11:00:00Z",
+    "2020-11-07T14:00:00Z",
+    "2020-11-07T18:00:00Z",
+    "2020-11-07T20:00:00Z",
+    "2020-11-07T21:00:00Z",
+    "2020-11-19T12:00:00Z",
+    "2020-11-21T18:00:00Z",
+    "2020-11-24T09:00:00Z",
+    "2020-11-25T02:00:00Z",
+    "2020-11-25T14:00:00Z",
+    "2020-11-26T03:00:00Z",
+    "2020-12-09T12:00:00Z",
+    "2020-12-23T22:00:00Z",
+    "2020-12-24T01:00:00Z",
+    "2020-12-29T19:00:00Z",
+    "2021-01-02T17:00:00Z",
+    "2021-01-02T20:00:00Z",
+    "2021-01-03T06:00:00Z",
+    "2021-01-03T08:00:00Z",
+    "2021-01-04T07:00:00Z",
+    "2021-01-04T19:00:00Z",
+    "2021-01-04T20:00:00Z",
+    "2021-01-04T22:00:00Z",
+    "2021-01-05T03:00:00Z",
+    "2021-01-07T00:00:00Z",
+    "2021-01-07T12:00:00Z",
+    "2021-01-07T13:00:00Z",
+    "2021-01-08T07:00:00Z",
+    "2021-01-08T09:00:00Z",
+    "2021-01-08T10:00:00Z",
+    "2021-01-08T11:00:00Z",
+    "2021-01-08T12:00:00Z",
+    "2021-01-09T17:00:00Z",
+    "2021-01-09T19:00:00Z",
+    "2021-01-11T03:00:00Z",
+    "2021-01-12T04:00:00Z",
+    "2021-01-12T18:00:00Z",
+    "2021-01-13T01:00:00Z",
+    "2021-01-13T07:00:00Z",
+    "2021-01-13T15:00:00Z",
+    "2021-01-14T03:00:00Z"
+  ],
+  "gaps": [
+    {
+      "start": "2021-01-11T06:00:00Z",
+      "end": "2021-01-11T09:00:00Z",
+      "missing_bars_estimate": 3,
+      "kind": "unexpected"
+    },
+    {
+      "start": "2021-06-22T02:00:00Z",
+      "end": "2021-06-22T09:00:00Z",
+      "missing_bars_estimate": 7,
+      "kind": "unexpected"
+    },
+    {
+      "start": "2023-02-06T05:00:00Z",
+      "end": "2023-02-06T12:00:00Z",
+      "missing_bars_estimate": 7,
+      "kind": "unexpected"
+    },
+    {
+      "start": "2026-08-31T04:00:00Z",
+      "end": "2026-08-31T13:00:00Z",
+      "missing_bars_estimate": 9,
+      "kind": "unexpected"
+    }
+  ],
+  "fetch_attempts": [
+    {
+      "source": "ccxt:binance",
+      "ok": false,
+      "bars": 0,
+      "error": "skipped (earlier failure in this process, e.g. geo-block)",
+      "notes": []
+    },
+    {
+      "source": "ccxt:binanceus",
+      "ok": true,
+      "bars": 54206,
+      "error": null,
+      "notes": []
+    }
+  ],
+  "warnings": [
+    "dropped 1 still-forming bar(s) (close_time > as_of)",
+    "flagged 252 statistical outlier bar(s); prices kept as published",
+    "detected 4 unexpected gap(s)"
+  ],
+  "errors": [],
+  "dropped_forming_bars": 1,
+  "cleaned_at": "2026-11-26T04:18:02.016658Z"
+}

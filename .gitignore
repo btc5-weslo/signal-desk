@@ -1,0 +1,63 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Secrets: never commit real env files. Set values in Vercel / Render.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Node / Next.js / Vercel
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+.vercel/
+
+# Market data and local databases (rebuilt by deploy/bootstrap_data.py or ingest)
+*.parquet
+*.duckdb
+*.duckdb.wal
+*.db
+*.sqlite
+*.sqlite3
+data/store/
+data/staging/
+data/backups/
+data/catalog/
+data/tracker/
+data/snapshots/
+vision_cache/
+data/lake/**
+!data/lake/.gitkeep
+
+# Backtest output. Unreviewed runs never go in the repo (QA).
+data/reports/oos_quant_v2/
+quant/reports/**
+!quant/reports/.gitkeep
+!quant/reports/README.md
+
+# Logs and review scratch
+*.log
+web/screenshots-review/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+*.pid

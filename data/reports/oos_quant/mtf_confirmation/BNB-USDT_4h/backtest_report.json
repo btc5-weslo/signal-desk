@@ -1,0 +1,550 @@
+{
+  "strategy_id": "mtf_confirmation",
+  "version": "0.1.0",
+  "period": {
+    "start": "2019-02-10T00:00:00Z",
+    "end": "2026-07-22T16:00:00Z"
+  },
+  "oos_windows": [
+    {
+      "train_start": "2018-02-09T08:00:00Z",
+      "train_end": "2019-02-10T00:00:00Z",
+      "test_start": "2019-02-10T00:00:00Z",
+      "test_end": "2019-08-09T12:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 0.7687483176774622,
+        "sharpe": -0.25892901757170145,
+        "sortino": 0.0,
+        "max_drawdown": -0.0665553121806054,
+        "avg_R": -0.14899649004417231,
+        "exposure": 0.011839708561020037
+      }
+    },
+    {
+      "train_start": "2018-08-08T20:00:00Z",
+      "train_end": "2019-08-09T12:00:00Z",
+      "test_start": "2019-08-09T12:00:00Z",
+      "test_end": "2020-02-05T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.4816045434122587,
+        "sortino": -0.06666191916977443,
+        "max_drawdown": -0.02155649285817407,
+        "avg_R": -0.23679594328489742,
+        "exposure": 0.020036429872495445
+      }
+    },
+    {
+      "train_start": "2020-02-19T16:00:00Z",
+      "train_end": "2021-02-18T16:00:00Z",
+      "test_start": "2021-02-18T16:00:00Z",
+      "test_end": "2021-08-17T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 2.0171621247663127,
+        "sharpe": 0.6381056474794767,
+        "sortino": 0.0,
+        "max_drawdown": -0.005538699095262056,
+        "avg_R": 0.01718792389245262,
+        "exposure": 0.020036429872495445
+      }
+    },
+    {
+      "train_start": "2020-08-17T16:00:00Z",
+      "train_end": "2021-08-17T16:00:00Z",
+      "test_start": "2021-08-17T16:00:00Z",
+      "test_end": "2022-02-13T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 1.0,
+        "profit_factor": 1000000.0,
+        "sharpe": 1.9771094795549553,
+        "sortino": 3856686926.3758965,
+        "max_drawdown": 0.0,
+        "avg_R": 0.7202852774756835,
+        "exposure": 0.01912568306010929
+      }
+    },
+    {
+      "train_start": "2021-02-13T16:00:00Z",
+      "train_end": "2022-02-13T16:00:00Z",
+      "test_start": "2022-02-13T16:00:00Z",
+      "test_end": "2022-08-12T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 1.2426157464611456,
+        "sharpe": 0.21482147959242978,
+        "sortino": 0.0,
+        "max_drawdown": -0.0451229877820396,
+        "avg_R": 0.18658461232365664,
+        "exposure": 0.01366120218579235
+      }
+    },
+    {
+      "train_start": "2021-08-12T16:00:00Z",
+      "train_end": "2022-08-12T16:00:00Z",
+      "test_start": "2022-08-12T16:00:00Z",
+      "test_end": "2023-02-08T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 0.09193830770492835,
+        "sharpe": -1.2775273884281009,
+        "sortino": 0.0,
+        "max_drawdown": -0.037461829797188595,
+        "avg_R": -0.4937934476705012,
+        "exposure": 0.011839708561020037
+      }
+    },
+    {
+      "train_start": "2022-02-08T16:00:00Z",
+      "train_end": "2023-02-08T16:00:00Z",
+      "test_start": "2023-02-08T16:00:00Z",
+      "test_end": "2023-08-07T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 1.9067605069849891,
+        "sharpe": 0.5948248237912889,
+        "sortino": 0.0,
+        "max_drawdown": -0.030457555524884716,
+        "avg_R": 0.15612463891359263,
+        "exposure": 0.01639344262295082
+      }
+    },
+    {
+      "train_start": "2022-08-07T16:00:00Z",
+      "train_end": "2023-08-07T16:00:00Z",
+      "test_start": "2023-08-07T16:00:00Z",
+      "test_end": "2024-02-03T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 1.3148657861012585,
+        "sharpe": 0.26919177429947116,
+        "sortino": 0.0,
+        "max_drawdown": -0.02890558514780539,
+        "avg_R": 0.163314228538202,
+        "exposure": 0.014571948998178506
+      }
+    },
+    {
+      "train_start": "2023-02-03T16:00:00Z",
+      "train_end": "2024-02-03T16:00:00Z",
+      "test_start": "2024-02-03T16:00:00Z",
+      "test_end": "2024-08-01T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 11.091254389527208,
+        "sharpe": 1.2802351168187547,
+        "sortino": 0.0,
+        "max_drawdown": -0.0029985007496250438,
+        "avg_R": 0.6622223577044926,
+        "exposure": 0.017304189435336976
+      }
+    },
+    {
+      "train_start": "2023-08-02T16:00:00Z",
+      "train_end": "2024-08-01T16:00:00Z",
+      "test_start": "2024-08-01T16:00:00Z",
+      "test_end": "2025-01-28T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.889183792270265,
+        "sortino": -0.17450785828477774,
+        "max_drawdown": -0.1143299765190714,
+        "avg_R": -0.7228596990937945,
+        "exposure": 0.017304189435336976
+      }
+    },
+    {
+      "train_start": "2024-01-29T16:00:00Z",
+      "train_end": "2025-01-28T16:00:00Z",
+      "test_start": "2025-01-28T16:00:00Z",
+      "test_end": "2025-07-27T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 1.0,
+        "profit_factor": 1000000.0,
+        "sharpe": 1.9205839272616172,
+        "sortino": 3743568425.078432,
+        "max_drawdown": 0.0,
+        "avg_R": 1.074476227380495,
+        "exposure": 0.01639344262295082
+      }
+    },
+    {
+      "train_start": "2024-07-27T16:00:00Z",
+      "train_end": "2025-07-27T16:00:00Z",
+      "test_start": "2025-07-27T16:00:00Z",
+      "test_end": "2026-01-23T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.9990817789666007,
+        "sortino": -23.796492845251436,
+        "max_drawdown": -0.07934493533871578,
+        "avg_R": -1.0641911543617726,
+        "exposure": 0.012750455373406194
+      }
+    },
+    {
+      "train_start": "2025-01-23T16:00:00Z",
+      "train_end": "2026-01-23T16:00:00Z",
+      "test_start": "2026-01-23T16:00:00Z",
+      "test_end": "2026-07-22T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.9841258265458135,
+        "sortino": -0.4907706757615415,
+        "max_drawdown": -0.04004698439035814,
+        "avg_R": -0.9220316022190416,
+        "exposure": 0.01912568306010929
+      }
+    }
+  ],
+  "trades": [
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2019-02-10T16:00:00Z",
+      "exit_time": "2019-02-12T08:00:00Z",
+      "entry_price": 9.088541999999999,
+      "exit_price": 9.5722115,
+      "exit_reason": "timeout",
+      "r_multiple": 0.7394696673700806,
+      "bars_held": 10,
+      "net_return": 0.05116428427133872
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2019-02-12T08:00:00Z",
+      "exit_time": "2019-02-12T16:00:00Z",
+      "entry_price": 9.58148835,
+      "exit_price": 8.962333223284201,
+      "exit_reason": "sl",
+      "r_multiple": -1.0374626474584252,
+      "bars_held": 2,
+      "net_return": -0.06655531218060541
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "short",
+      "entry_time": "2019-08-09T16:00:00Z",
+      "exit_time": "2019-08-11T08:00:00Z",
+      "entry_price": 29.943820600000002,
+      "exit_price": 29.914649849999996,
+      "exit_reason": "timeout",
+      "r_multiple": -0.019291082369192674,
+      "bars_held": 10,
+      "net_return": -0.0010248431841725037
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "short",
+      "entry_time": "2019-08-11T12:00:00Z",
+      "exit_time": "2019-08-13T04:00:00Z",
+      "entry_price": 29.74621945,
+      "exit_price": 30.297541199999998,
+      "exit_reason": "timeout",
+      "r_multiple": -0.45430080420060215,
+      "bars_held": 10,
+      "net_return": -0.02055271298181712
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2021-02-20T16:00:00Z",
+      "exit_time": "2021-02-22T08:00:00Z",
+      "entry_price": 274.18512404999996,
+      "exit_price": 277.8004303,
+      "exit_reason": "timeout",
+      "r_multiple": 0.057277582243386846,
+      "bars_held": 10,
+      "net_return": 0.011172454035440076
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2021-02-24T04:00:00Z",
+      "exit_time": "2021-02-25T20:00:00Z",
+      "entry_price": 247.56161895,
+      "exit_price": 246.68469595000002,
+      "exit_reason": "timeout",
+      "r_multiple": -0.02290173445848161,
+      "bars_held": 10,
+      "net_return": -0.005538699095262063
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2021-08-18T16:00:00Z",
+      "exit_time": "2021-08-20T08:00:00Z",
+      "entry_price": 408.56417999999996,
+      "exit_price": 425.10734,
+      "exit_reason": "timeout",
+      "r_multiple": 0.5730564141840074,
+      "bars_held": 10,
+      "net_return": 0.03845047913892025
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2021-08-20T08:00:00Z",
+      "exit_time": "2021-08-22T00:00:00Z",
+      "entry_price": 425.53265999999996,
+      "exit_price": 448.51563000000004,
+      "exit_reason": "timeout",
+      "r_multiple": 0.8675141407673596,
+      "bars_held": 10,
+      "net_return": 0.05195587504376299
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "short",
+      "entry_time": "2022-02-13T20:00:00Z",
+      "exit_time": "2022-02-15T04:00:00Z",
+      "entry_price": 396.00190000000003,
+      "exit_price": 413.0616253699945,
+      "exit_reason": "sl",
+      "r_multiple": -1.060254742902385,
+      "bars_held": 8,
+      "net_return": -0.04512298778203955
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "short",
+      "entry_time": "2022-02-17T04:00:00Z",
+      "exit_time": "2022-02-18T00:00:00Z",
+      "entry_price": 424.88745000000006,
+      "exit_price": 400.238657194768,
+      "exit_reason": "tp",
+      "r_multiple": 1.4334239675496983,
+      "bars_held": 5,
+      "net_return": 0.05607053514533623
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2022-08-12T20:00:00Z",
+      "exit_time": "2022-08-14T12:00:00Z",
+      "entry_price": 325.46265,
+      "exit_price": 327.23629999999997,
+      "exit_reason": "timeout",
+      "r_multiple": 0.08229763467723047,
+      "bars_held": 10,
+      "net_return": 0.0034441772350835807
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2022-08-14T12:00:00Z",
+      "exit_time": "2022-08-14T20:00:00Z",
+      "entry_price": 327.5637,
+      "exit_price": 315.9360641870497,
+      "exit_reason": "sl",
+      "r_multiple": -1.069884530018233,
+      "bars_held": 2,
+      "net_return": -0.037461829797188616
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2023-02-12T00:00:00Z",
+      "exit_time": "2023-02-13T12:00:00Z",
+      "entry_price": 310.65524999999997,
+      "exit_price": 301.8059116356637,
+      "exit_reason": "sl",
+      "r_multiple": -1.087768224557185,
+      "bars_held": 9,
+      "net_return": -0.030457555524884754
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2023-02-14T20:00:00Z",
+      "exit_time": "2023-02-16T00:00:00Z",
+      "entry_price": 298.34909999999996,
+      "exit_price": 316.290442293178,
+      "exit_reason": "tp",
+      "r_multiple": 1.4000175023843702,
+      "bars_held": 7,
+      "net_return": 0.05807526401415271
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "short",
+      "entry_time": "2023-08-20T00:00:00Z",
+      "exit_time": "2023-08-21T12:00:00Z",
+      "entry_price": 216.79155000000003,
+      "exit_price": 208.127042567709,
+      "exit_reason": "tp",
+      "r_multiple": 1.4229687194264253,
+      "bars_held": 9,
+      "net_return": 0.038006964938086016
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "short",
+      "entry_time": "2023-08-22T08:00:00Z",
+      "exit_time": "2023-08-23T04:00:00Z",
+      "entry_price": 209.79505,
+      "exit_price": 215.4340695618013,
+      "exit_reason": "sl",
+      "r_multiple": -1.0963402623500214,
+      "bars_held": 5,
+      "net_return": -0.028905585147805404
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2024-02-14T00:00:00Z",
+      "exit_time": "2024-02-15T04:00:00Z",
+      "entry_price": 324.7623,
+      "exit_price": 336.223949774295,
+      "exit_reason": "tp",
+      "r_multiple": 1.3945457332568167,
+      "bars_held": 7,
+      "net_return": 0.03325713460127837
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2024-02-16T20:00:00Z",
+      "exit_time": "2024-02-18T12:00:00Z",
+      "entry_price": 354.67724999999996,
+      "exit_price": 354.32275000000004,
+      "exit_reason": "timeout",
+      "r_multiple": -0.07010101784783157,
+      "bars_held": 10,
+      "net_return": -0.002998500749624952
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "short",
+      "entry_time": "2024-08-06T00:00:00Z",
+      "exit_time": "2024-08-07T16:00:00Z",
+      "entry_price": 464.06785,
+      "exit_price": 480.94034999999997,
+      "exit_reason": "timeout",
+      "r_multiple": -0.4114695316422631,
+      "bars_held": 10,
+      "net_return": -0.03839418783266271
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "short",
+      "entry_time": "2024-08-07T16:00:00Z",
+      "exit_time": "2024-08-09T00:00:00Z",
+      "entry_price": 480.45965,
+      "exit_price": 517.4025759775748,
+      "exit_reason": "sl",
+      "r_multiple": -1.034249866545326,
+      "bars_held": 8,
+      "net_return": -0.07896768896941155
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "short",
+      "entry_time": "2025-02-01T00:00:00Z",
+      "exit_time": "2025-02-02T00:00:00Z",
+      "entry_price": 677.1412600000001,
+      "exit_price": 654.671854489053,
+      "exit_reason": "tp",
+      "r_multiple": 1.3613001059468186,
+      "bars_held": 6,
+      "net_return": 0.031215927377484087
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "short",
+      "entry_time": "2025-02-03T20:00:00Z",
+      "exit_time": "2025-02-05T12:00:00Z",
+      "entry_price": 610.75447,
+      "exit_price": 575.037375,
+      "exit_reason": "timeout",
+      "r_multiple": 0.7876523488141715,
+      "bars_held": 10,
+      "net_return": 0.05653876451366778
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2025-07-28T16:00:00Z",
+      "exit_time": "2025-07-29T16:00:00Z",
+      "entry_price": 836.59809,
+      "exit_price": 804.4492606661793,
+      "exit_reason": "sl",
+      "r_multiple": -1.0643686518546316,
+      "bars_held": 6,
+      "net_return": -0.04038961729459228
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2025-07-31T08:00:00Z",
+      "exit_time": "2025-08-01T08:00:00Z",
+      "entry_price": 804.091845,
+      "exit_price": 773.0269101433942,
+      "exit_reason": "sl",
+      "r_multiple": -1.0640136568689136,
+      "bars_held": 6,
+      "net_return": -0.040594931803778295
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "long",
+      "entry_time": "2026-01-23T20:00:00Z",
+      "exit_time": "2026-01-25T12:00:00Z",
+      "entry_price": 894.1668599999999,
+      "exit_price": 880.07974,
+      "exit_reason": "timeout",
+      "r_multiple": -0.7186551039395496,
+      "bars_held": 10,
+      "net_return": -0.01773870997634593
+    },
+    {
+      "symbol": "BNB-USDT",
+      "side": "short",
+      "entry_time": "2026-01-26T08:00:00Z",
+      "exit_time": "2026-01-27T20:00:00Z",
+      "entry_price": 874.1926850000001,
+      "exit_price": 892.2801253040288,
+      "exit_reason": "sl",
+      "r_multiple": -1.1254081004985337,
+      "bars_held": 9,
+      "net_return": -0.022711140753062665
+    }
+  ],
+  "trade_count": 26,
+  "win_rate": 0.4230769230769231,
+  "profit_factor": 0.8993276019396338,
+  "sharpe": -0.09252896202891896,
+  "sortino": -0.007312486673382116,
+  "max_drawdown": -0.14974395330036616,
+  "avg_R": -0.04680562080350807,
+  "exposure": 0.016452991452991454,
+  "fees_bps": 10.0,
+  "slippage_bps": 5.0,
+  "run_id": "3b7eea08cfe82205",
+  "data_hash": "dbe1734a9cf407dd5e99e100c711cd8cd4e78c82ead2e30e9027dac8c6da0d3e",
+  "symbol": "BNB-USDT",
+  "timeframe": "4h",
+  "flags": [
+    "low_oos_trades",
+    "data_quality_warning"
+  ]
+}

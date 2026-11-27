@@ -1,0 +1,63 @@
+{
+  "symbol": "XRP-USDT",
+  "asset_class": "crypto",
+  "timeframe": "1d",
+  "source": "ccxt:binanceus",
+  "start": "2019-09-23T00:00:00Z",
+  "end": "2026-11-26T00:00:00Z",
+  "n_bars": 1710,
+  "n_duplicates_removed": 0,
+  "n_bad_ticks_dropped": 0,
+  "n_outliers_flagged": 11,
+  "n_zero_volume": 0,
+  "n_gaps_unexpected": 1,
+  "n_gaps_calendar": 0,
+  "missing_pct_estimate": 0.347577260587562,
+  "history_limitations": [],
+  "bad_tick_times": [],
+  "outlier_times": [
+    "2020-03-12T00:00:00Z",
+    "2020-11-21T00:00:00Z",
+    "2020-11-23T00:00:00Z",
+    "2020-12-16T00:00:00Z",
+    "2020-12-23T00:00:00Z",
+    "2020-12-24T00:00:00Z",
+    "2021-01-07T00:00:00Z",
+    "2023-07-14T00:00:00Z",
+    "2024-11-16T00:00:00Z",
+    "2025-03-02T00:00:00Z",
+    "2026-02-06T00:00:00Z"
+  ],
+  "gaps": [
+    {
+      "start": "2021-01-14T00:00:00Z",
+      "end": "2023-07-14T00:00:00Z",
+      "missing_bars_estimate": 911,
+      "kind": "unexpected"
+    }
+  ],
+  "fetch_attempts": [
+    {
+      "source": "ccxt:binance",
+      "ok": false,
+      "bars": 0,
+      "error": "skipped (earlier failure in this process, e.g. geo-block)",
+      "notes": []
+    },
+    {
+      "source": "ccxt:binanceus",
+      "ok": true,
+      "bars": 1711,
+      "error": null,
+      "notes": []
+    }
+  ],
+  "warnings": [
+    "dropped 1 still-forming bar(s) (close_time > as_of)",
+    "flagged 11 statistical outlier bar(s); prices kept as published",
+    "detected 1 unexpected gap(s)"
+  ],
+  "errors": [],
+  "dropped_forming_bars": 1,
+  "cleaned_at": "2026-11-26T04:20:07.246719Z"
+}

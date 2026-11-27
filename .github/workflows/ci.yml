@@ -1,0 +1,167 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+# Audit jobs are hard failures. Do not set continue-on-error.
+
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+      - name: Install data package
+        working-directory: data
+        run: |
+          uv sync --extra dev
+          uv pip install jsonschema
+      - name: Pytest
+        working-directory: data
+        run: uv run pytest
+
+  quant:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+      - name: Install quant package
+        working-directory: quant
+        run: uv sync --extra dev
+      - name: Pytest
+        working-directory: quant
+        run: uv run pytest -k "not smoke_main"
+      - name: Smoke gate on fixtures only
+        working-directory: quant
+        env:
+          SIGNAL_DATA_DIR: ""
+        run: uv run python -m signal_quant.smoke --gate
+
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+      - name: Install backend and path deps
+        working-directory: backend
+        run: uv sync --extra dev
+      - name: Pytest
+        working-directory: backend
+        run: uv run pytest
+      - name: QA backend gates
+        working-directory: backend
+        run: PYTHONPATH=. uv run pytest ../qa/backend_gates
+
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+      - name: Install quant deps for QA tests
+        working-directory: quant
+        run: uv sync --extra dev
+      - name: QA unit tests
+        working-directory: qa
+        run: uv run --project ../quant pytest tests
+
+  no-price-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: No-price scan
+        run: python3 qa/audits/no_price_scan.py
+
+  backtest-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Backtest report check
+        run: |
+          set -euo pipefail
+          test -f qa/audits/backtest_report_check.py
+          test -f data/reports/oos_quant/WITHDRAWN.md
+          echo "data/reports/oos_quant is withdrawn and expected to fail structural checks; not gated"
+          mapfile -t reports < <(find data/reports quant/reports -name 'backtest_report.json' -not -path 'data/reports/oos_quant/*' 2>/dev/null || true)
+          if (( ${#reports[@]} == 0 )); then
+            echo "no other backtest reports to check"
+            exit 0
+          fi
+          fail=0
+          for report in "${reports[@]}"; do
+            if ! python3 qa/audits/backtest_report_check.py "$report"; then
+              echo "failed: $report"
+              fail=1
+            fi
+          done
+          exit "$fail"
+
+  backend-services:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: signal
+          POSTGRES_PASSWORD: signal
+          POSTGRES_DB: signal
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U signal -d signal"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      SIGNAL_DATABASE_URL: postgresql+psycopg://signal:signal@localhost:5432/signal
+      SIGNAL_REDIS_URL: redis://localhost:6379/0
+      SIGNAL_ENV: dev
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+      - name: Install backend
+        working-directory: backend
+        run: uv sync --extra dev
+      - name: Alembic upgrade head
+        working-directory: backend
+        run: uv run alembic upgrade head
+
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+      - name: No-price scan
+        working-directory: ${{ github.workspace }}
+        run: python3 qa/audits/no_price_scan.py

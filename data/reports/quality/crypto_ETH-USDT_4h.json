@@ -1,0 +1,126 @@
+{
+  "symbol": "ETH-USDT",
+  "asset_class": "crypto",
+  "timeframe": "4h",
+  "source": "ccxt:binanceus",
+  "start": "2019-09-23T08:00:00Z",
+  "end": "2026-11-26T04:00:00Z",
+  "n_bars": 15717,
+  "n_duplicates_removed": 0,
+  "n_bad_ticks_dropped": 0,
+  "n_outliers_flagged": 58,
+  "n_zero_volume": 6,
+  "n_gaps_unexpected": 5,
+  "n_gaps_calendar": 0,
+  "missing_pct_estimate": 0.0005087440381558173,
+  "history_limitations": [],
+  "bad_tick_times": [],
+  "outlier_times": [
+    "2019-09-24T12:00:00Z",
+    "2019-09-24T16:00:00Z",
+    "2020-03-12T08:00:00Z",
+    "2020-03-12T20:00:00Z",
+    "2020-03-13T00:00:00Z",
+    "2020-03-16T04:00:00Z",
+    "2020-03-16T12:00:00Z",
+    "2020-03-17T00:00:00Z",
+    "2020-05-10T00:00:00Z",
+    "2020-09-05T16:00:00Z",
+    "2020-12-27T12:00:00Z",
+    "2021-01-03T12:00:00Z",
+    "2021-01-11T00:00:00Z",
+    "2021-01-11T12:00:00Z",
+    "2021-01-11T20:00:00Z",
+    "2021-01-20T08:00:00Z",
+    "2021-01-21T20:00:00Z",
+    "2021-01-29T08:00:00Z",
+    "2021-02-23T08:00:00Z",
+    "2021-02-23T12:00:00Z",
+    "2021-02-23T16:00:00Z",
+    "2021-02-23T20:00:00Z",
+    "2021-04-21T12:00:00Z",
+    "2021-05-17T00:00:00Z",
+    "2021-05-17T04:00:00Z",
+    "2021-05-19T00:00:00Z",
+    "2021-05-19T08:00:00Z",
+    "2021-05-20T04:00:00Z",
+    "2021-05-21T12:00:00Z",
+    "2021-05-23T12:00:00Z",
+    "2021-05-25T08:00:00Z",
+    "2021-05-25T12:00:00Z",
+    "2021-05-25T20:00:00Z",
+    "2021-06-27T20:00:00Z",
+    "2021-09-07T12:00:00Z",
+    "2021-09-24T08:00:00Z",
+    "2021-11-26T08:00:00Z",
+    "2021-12-15T16:00:00Z",
+    "2022-06-18T20:00:00Z",
+    "2022-06-19T08:00:00Z",
+    "2022-09-13T12:00:00Z",
+    "2022-11-08T16:00:00Z",
+    "2022-11-09T20:00:00Z",
+    "2022-11-10T12:00:00Z",
+    "2024-03-05T16:00:00Z",
+    "2024-03-05T20:00:00Z",
+    "2024-05-20T16:00:00Z",
+    "2024-08-05T00:00:00Z",
+    "2024-12-20T08:00:00Z",
+    "2024-12-20T12:00:00Z"
+  ],
+  "gaps": [
+    {
+      "start": "2020-04-28T04:00:00Z",
+      "end": "2020-04-28T12:00:00Z",
+      "missing_bars_estimate": 2,
+      "kind": "unexpected"
+    },
+    {
+      "start": "2020-07-09T04:00:00Z",
+      "end": "2020-07-09T12:00:00Z",
+      "missing_bars_estimate": 2,
+      "kind": "unexpected"
+    },
+    {
+      "start": "2021-06-22T04:00:00Z",
+      "end": "2021-06-22T08:00:00Z",
+      "missing_bars_estimate": 1,
+      "kind": "unexpected"
+    },
+    {
+      "start": "2023-02-06T08:00:00Z",
+      "end": "2023-02-06T12:00:00Z",
+      "missing_bars_estimate": 1,
+      "kind": "unexpected"
+    },
+    {
+      "start": "2026-08-31T04:00:00Z",
+      "end": "2026-08-31T12:00:00Z",
+      "missing_bars_estimate": 2,
+      "kind": "unexpected"
+    }
+  ],
+  "fetch_attempts": [
+    {
+      "source": "ccxt:binance",
+      "ok": false,
+      "bars": 0,
+      "error": "skipped (earlier failure in this process, e.g. geo-block)",
+      "notes": []
+    },
+    {
+      "source": "ccxt:binanceus",
+      "ok": true,
+      "bars": 15718,
+      "error": null,
+      "notes": []
+    }
+  ],
+  "warnings": [
+    "dropped 1 still-forming bar(s) (close_time > as_of)",
+    "flagged 58 statistical outlier bar(s); prices kept as published",
+    "detected 5 unexpected gap(s)"
+  ],
+  "errors": [],
+  "dropped_forming_bars": 1,
+  "cleaned_at": "2026-11-26T04:16:33.763182Z"
+}

@@ -1,0 +1,514 @@
+{
+  "strategy_id": "mean_reversion_rsi_bb",
+  "version": "0.1.0",
+  "period": {
+    "start": "2019-02-10T00:00:00Z",
+    "end": "2026-07-22T16:00:00Z"
+  },
+  "oos_windows": [
+    {
+      "train_start": "2018-02-09T08:00:00Z",
+      "train_end": "2019-02-10T00:00:00Z",
+      "test_start": "2019-02-10T00:00:00Z",
+      "test_end": "2019-08-09T12:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 0.6995599073870178,
+        "sharpe": -0.3476860288219131,
+        "sortino": 0.0,
+        "max_drawdown": -0.03519432091379704,
+        "avg_R": -0.09485926009169854,
+        "exposure": 0.00819672131147541
+      }
+    },
+    {
+      "train_start": "2018-08-08T20:00:00Z",
+      "train_end": "2019-08-09T12:00:00Z",
+      "test_start": "2019-08-09T12:00:00Z",
+      "test_end": "2020-02-05T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.8613153739695134,
+        "sortino": -0.154116267976966,
+        "max_drawdown": -0.03510823570022226,
+        "avg_R": -0.8120533626370277,
+        "exposure": 0.017304189435336976
+      }
+    },
+    {
+      "train_start": "2020-02-19T16:00:00Z",
+      "train_end": "2021-02-18T16:00:00Z",
+      "test_start": "2021-02-18T16:00:00Z",
+      "test_end": "2021-08-17T16:00:00Z",
+      "trades": 1,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.412923809653926,
+        "sortino": 0.0,
+        "max_drawdown": -0.03312790099276086,
+        "avg_R": -1.0832655835224887,
+        "exposure": 0.0036429872495446266
+      }
+    },
+    {
+      "train_start": "2020-08-17T16:00:00Z",
+      "train_end": "2021-08-17T16:00:00Z",
+      "test_start": "2021-08-17T16:00:00Z",
+      "test_end": "2022-02-13T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.9754251848371827,
+        "sortino": -0.38896462501534196,
+        "max_drawdown": -0.06456762288312956,
+        "avg_R": -1.0849014015752696,
+        "exposure": 0.010018214936247723
+      }
+    },
+    {
+      "train_start": "2021-02-13T16:00:00Z",
+      "train_end": "2022-02-13T16:00:00Z",
+      "test_start": "2022-02-13T16:00:00Z",
+      "test_end": "2022-08-12T16:00:00Z",
+      "trades": 1,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.4129238096539263,
+        "sortino": 0.0,
+        "max_drawdown": -0.04259037071910643,
+        "avg_R": -1.0607528770370638,
+        "exposure": 0.004553734061930784
+      }
+    },
+    {
+      "train_start": "2021-08-12T16:00:00Z",
+      "train_end": "2022-08-12T16:00:00Z",
+      "test_start": "2022-08-12T16:00:00Z",
+      "test_end": "2023-02-08T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.998874833268205,
+        "sortino": -4.132512159287234,
+        "max_drawdown": -0.08317662101127354,
+        "avg_R": -1.0609228072567265,
+        "exposure": 0.004553734061930784
+      }
+    },
+    {
+      "train_start": "2022-02-08T16:00:00Z",
+      "train_end": "2023-02-08T16:00:00Z",
+      "test_start": "2023-02-08T16:00:00Z",
+      "test_end": "2023-08-07T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 1.0,
+        "profit_factor": 1000000.0,
+        "sharpe": 1.9894990538807824,
+        "sortino": 1468445499.1362934,
+        "max_drawdown": 0.0,
+        "avg_R": 0.8515467899034036,
+        "exposure": 0.011839708561020037
+      }
+    },
+    {
+      "train_start": "2022-08-07T16:00:00Z",
+      "train_end": "2023-08-07T16:00:00Z",
+      "test_start": "2023-08-07T16:00:00Z",
+      "test_end": "2024-02-03T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 0.3824229955902876,
+        "sharpe": -0.8147765594827708,
+        "sortino": 0.0,
+        "max_drawdown": -0.009972997856607657,
+        "avg_R": -0.13749759382314092,
+        "exposure": 0.020036429872495445
+      }
+    },
+    {
+      "train_start": "2023-02-03T16:00:00Z",
+      "train_end": "2024-02-03T16:00:00Z",
+      "test_start": "2024-02-03T16:00:00Z",
+      "test_end": "2024-08-01T16:00:00Z",
+      "trades": 1,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.4129238096539258,
+        "sortino": 0.0,
+        "max_drawdown": -0.03631674509043059,
+        "avg_R": -1.072301662486064,
+        "exposure": 0.004553734061930784
+      }
+    },
+    {
+      "train_start": "2023-08-02T16:00:00Z",
+      "train_end": "2024-08-01T16:00:00Z",
+      "test_start": "2024-08-01T16:00:00Z",
+      "test_end": "2025-01-28T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 0.5805565316325215,
+        "sharpe": -0.5123267529808234,
+        "sortino": 0.0,
+        "max_drawdown": -0.03780584886232985,
+        "avg_R": -0.09675335231525711,
+        "exposure": 0.011839708561020037
+      }
+    },
+    {
+      "train_start": "2024-01-29T16:00:00Z",
+      "train_end": "2025-01-28T16:00:00Z",
+      "test_start": "2025-01-28T16:00:00Z",
+      "test_end": "2025-07-27T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 17.23063775624762,
+        "sharpe": 1.328617267179057,
+        "sortino": 0.0,
+        "max_drawdown": -0.001534221660458468,
+        "avg_R": 0.4162544987805362,
+        "exposure": 0.015482695810564663
+      }
+    },
+    {
+      "train_start": "2024-07-27T16:00:00Z",
+      "train_end": "2025-07-27T16:00:00Z",
+      "test_start": "2025-07-27T16:00:00Z",
+      "test_end": "2026-01-23T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 1.184327048631303,
+        "sharpe": 0.16794577290067944,
+        "sortino": 0.0,
+        "max_drawdown": -0.02570984753634009,
+        "avg_R": -0.0991905436358167,
+        "exposure": 0.01366120218579235
+      }
+    },
+    {
+      "train_start": "2025-01-23T16:00:00Z",
+      "train_end": "2026-01-23T16:00:00Z",
+      "test_start": "2026-01-23T16:00:00Z",
+      "test_end": "2026-07-22T16:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 1.0,
+        "profit_factor": 1000000.0,
+        "sharpe": 1.8750332692400216,
+        "sortino": 2575683419.690411,
+        "max_drawdown": 0.0,
+        "avg_R": 0.8989573757805169,
+        "exposure": 0.009107468123861567
+      }
+    }
+  ],
+  "trades": [
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2019-05-03T12:00:00Z",
+      "exit_time": "2019-05-04T08:00:00Z",
+      "entry_price": 167.286315,
+      "exit_price": 162.837512452024,
+      "exit_reason": "tp",
+      "r_multiple": 0.8883790838030972,
+      "bars_held": 5,
+      "net_return": 0.024620535879004753
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2019-05-06T20:00:00Z",
+      "exit_time": "2019-05-07T04:00:00Z",
+      "entry_price": 174.862525,
+      "exit_price": 180.66116912652032,
+      "exit_reason": "sl",
+      "r_multiple": -1.0780976039864942,
+      "bars_held": 2,
+      "net_return": -0.035194320913796914
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2019-09-15T00:00:00Z",
+      "exit_time": "2019-09-16T04:00:00Z",
+      "entry_price": 188.04593,
+      "exit_price": 192.2934105183382,
+      "exit_reason": "sl",
+      "r_multiple": -1.114766121797646,
+      "bars_held": 7,
+      "net_return": -0.024610050634206928
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "long",
+      "entry_time": "2019-11-19T08:00:00Z",
+      "exit_time": "2019-11-21T00:00:00Z",
+      "entry_price": 176.178045,
+      "exit_price": 174.63264,
+      "exit_reason": "timeout",
+      "r_multiple": -0.5093406034764095,
+      "bars_held": 10,
+      "net_return": -0.010763064631577609
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2021-04-13T16:00:00Z",
+      "exit_time": "2021-04-14T04:00:00Z",
+      "entry_price": 2274.5521550000003,
+      "exit_price": 2345.2834579807304,
+      "exit_reason": "sl",
+      "r_multiple": -1.0832655835224887,
+      "bars_held": 3,
+      "net_return": -0.03312790099276085
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2021-11-08T04:00:00Z",
+      "exit_time": "2021-11-09T08:00:00Z",
+      "entry_price": 4718.149745000001,
+      "exit_price": 4839.380708148384,
+      "exit_reason": "sl",
+      "r_multiple": -1.1007975876065899,
+      "bars_held": 7,
+      "net_return": -0.02772029305346507
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "long",
+      "entry_time": "2021-11-16T04:00:00Z",
+      "exit_time": "2021-11-16T12:00:00Z",
+      "entry_price": 4311.744795,
+      "exit_price": 4156.807403963082,
+      "exit_reason": "sl",
+      "r_multiple": -1.0690052155439493,
+      "bars_held": 2,
+      "net_return": -0.03789786988909226
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "long",
+      "entry_time": "2022-06-10T20:00:00Z",
+      "exit_time": "2022-06-11T12:00:00Z",
+      "entry_price": 1669.8445049999998,
+      "exit_price": 1601.9970500438308,
+      "exit_reason": "sl",
+      "r_multiple": -1.0607528770370638,
+      "bars_held": 4,
+      "net_return": -0.042590370719106485
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "long",
+      "entry_time": "2022-08-19T08:00:00Z",
+      "exit_time": "2022-08-19T16:00:00Z",
+      "entry_price": 1745.502315,
+      "exit_price": 1675.838530951625,
+      "exit_reason": "sl",
+      "r_multiple": -1.0618910526864478,
+      "bars_held": 2,
+      "net_return": -0.04187054022573816
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "long",
+      "entry_time": "2022-08-19T16:00:00Z",
+      "exit_time": "2022-08-20T00:00:00Z",
+      "entry_price": 1699.019085,
+      "exit_price": 1629.1005061776762,
+      "exit_reason": "sl",
+      "r_multiple": -1.0599545618270052,
+      "bars_held": 2,
+      "net_return": -0.04311116870915045
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2023-04-11T00:00:00Z",
+      "exit_time": "2023-04-12T04:00:00Z",
+      "entry_price": 1909.254895,
+      "exit_price": 1875.836417427378,
+      "exit_reason": "tp",
+      "r_multiple": 0.839266149421318,
+      "bars_held": 7,
+      "net_return": 0.015520916739718373
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2023-05-05T20:00:00Z",
+      "exit_time": "2023-05-06T12:00:00Z",
+      "entry_price": 1989.974515,
+      "exit_price": 1948.422449998285,
+      "exit_reason": "tp",
+      "r_multiple": 0.8638274303854891,
+      "bars_held": 4,
+      "net_return": 0.018901582785705615
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "long",
+      "entry_time": "2023-09-21T16:00:00Z",
+      "exit_time": "2023-09-23T08:00:00Z",
+      "entry_price": 1584.43182,
+      "exit_price": 1593.652775,
+      "exit_reason": "timeout",
+      "r_multiple": 0.21885850671970344,
+      "bars_held": 10,
+      "net_return": 0.0038139037153394227
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2023-11-05T04:00:00Z",
+      "exit_time": "2023-11-06T20:00:00Z",
+      "entry_price": 1887.6457050000001,
+      "exit_price": 1902.6808649999998,
+      "exit_reason": "timeout",
+      "r_multiple": -0.4938536943659853,
+      "bars_held": 10,
+      "net_return": -0.009972997856607671
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "long",
+      "entry_time": "2024-04-30T16:00:00Z",
+      "exit_time": "2024-05-01T08:00:00Z",
+      "entry_price": 2995.607055,
+      "exit_price": 2892.704668916386,
+      "exit_reason": "sl",
+      "r_multiple": -1.072301662486064,
+      "bars_held": 4,
+      "net_return": -0.036316745090430605
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "long",
+      "entry_time": "2024-09-16T04:00:00Z",
+      "exit_time": "2024-09-16T12:00:00Z",
+      "entry_price": 2279.51919,
+      "exit_price": 2334.164746990502,
+      "exit_reason": "tp",
+      "r_multiple": 0.878925030464062,
+      "bars_held": 2,
+      "net_return": 0.02194843249093747
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2024-11-22T04:00:00Z",
+      "exit_time": "2024-11-23T16:00:00Z",
+      "entry_price": 3364.1171000000004,
+      "exit_price": 3484.4518337040754,
+      "exit_reason": "sl",
+      "r_multiple": -1.0724317350945762,
+      "bars_held": 9,
+      "net_return": -0.03780584886232975
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2025-03-19T16:00:00Z",
+      "exit_time": "2025-03-20T12:00:00Z",
+      "entry_price": 2047.9755,
+      "exit_price": 1989.798228957258,
+      "exit_reason": "tp",
+      "r_multiple": 0.8992335246165553,
+      "bars_held": 5,
+      "net_return": 0.026435617669149213
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2025-03-24T08:00:00Z",
+      "exit_time": "2025-03-26T00:00:00Z",
+      "entry_price": 2068.14541,
+      "exit_price": 2067.183075,
+      "exit_reason": "timeout",
+      "r_multiple": -0.06672452705548276,
+      "bars_held": 10,
+      "net_return": -0.0015342216604585038
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2025-12-09T20:00:00Z",
+      "exit_time": "2025-12-11T04:00:00Z",
+      "entry_price": 3356.191065,
+      "exit_price": 3247.395260445358,
+      "exit_reason": "tp",
+      "r_multiple": 0.9110178358240104,
+      "bars_held": 8,
+      "net_return": 0.03044886785347445
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2026-01-14T00:00:00Z",
+      "exit_time": "2026-01-14T20:00:00Z",
+      "entry_price": 3324.167085,
+      "exit_price": 3402.9038430126575,
+      "exit_reason": "sl",
+      "r_multiple": -1.1093989230956438,
+      "bars_held": 5,
+      "net_return": -0.025709847536340102
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2026-03-04T20:00:00Z",
+      "exit_time": "2026-03-05T16:00:00Z",
+      "entry_price": 2176.4212450000005,
+      "exit_price": 2082.188422909425,
+      "exit_reason": "tp",
+      "r_multiple": 0.9332424281884855,
+      "bars_held": 5,
+      "net_return": 0.041340440243068
+    },
+    {
+      "symbol": "ETH-USDT",
+      "side": "short",
+      "entry_time": "2026-04-06T12:00:00Z",
+      "exit_time": "2026-04-07T00:00:00Z",
+      "entry_price": 2150.454235,
+      "exit_price": 2105.259619597411,
+      "exit_reason": "tp",
+      "r_multiple": 0.8646723233725483,
+      "bars_held": 3,
+      "net_return": 0.01903732750117868
+    }
+  ],
+  "trade_count": 23,
+  "win_rate": 0.391304347826087,
+  "profit_factor": 0.49499052163929885,
+  "sharpe": -0.5816705653658829,
+  "sortino": -0.05171526221231721,
+  "max_drawdown": -0.2798371565336908,
+  "avg_R": -0.24587649725159033,
+  "exposure": 0.010541310541310541,
+  "fees_bps": 10.0,
+  "slippage_bps": 5.0,
+  "run_id": "6d081ae3320ddd36",
+  "data_hash": "efe1b18803a6b2bc59c6916767fcd945abf51e129f93c2ce31b3306f769fbc2d",
+  "symbol": "ETH-USDT",
+  "timeframe": "4h",
+  "flags": [
+    "low_oos_trades",
+    "data_quality_warning"
+  ]
+}

@@ -1,0 +1,56 @@
+# Render Blueprint for the public demo (free plan only, nothing billable).
+# The Next.js app (web/) deploys separately on Vercel with Root Directory = web.
+#
+# One Docker web service runs the FastAPI app. The Parquet store lives on the
+# container's ephemeral disk: it is built into the image from
+# data.binance.vision and topped up on each start (deploy/start-api.sh).
+# The free plan has no background workers, so the arq worker is not deployed.
+#
+# SIGNAL_ENV=staging, not prod: in prod the API accepts only JWTs and there is
+# no sign-in flow yet, so the web proxy could not read anything. Staging still
+# hides unapproved markets and mock data (both are dev-only).
+
+services:
+  - type: web
+    name: signal-desk-api
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./deploy/api.Dockerfile
+    dockerContext: .
+    healthCheckPath: /v1/health
+    autoDeploy: false
+    envVars:
+      - key: SIGNAL_ENV
+        value: staging
+      - key: SIGNAL_USE_MOCK_DATA
+        value: "false"
+      - key: SIGNAL_DATA_DIR
+        value: /app/store
+      - key: SIGNAL_JWT_SECRET
+        generateValue: true
+      - key: SIGNAL_REDIS_URL
+        fromService:
+          type: keyvalue
+          name: signal-desk-kv
+          property: connectionString
+      # signal_data.live reads REDIS_URL; keep it equal to SIGNAL_REDIS_URL.
+      - key: REDIS_URL
+        fromService:
+          type: keyvalue
+          name: signal-desk-kv
+          property: connectionString
+      # Demo key the web proxy sends. The backend currently accepts only its
+      # built-in dev key outside prod, so treat this value as public.
+      - key: SIGNAL_API_KEY
+        sync: false
+      # Set to the Vercel production URL, e.g. https://signal-desk.vercel.app
+      - key: SIGNAL_CORS_ORIGINS
+        sync: false
+
+  - type: keyvalue
+    name: signal-desk-kv
+    plan: free
+    region: oregon
+    maxmemoryPolicy: noeviction
+    ipAllowList: []   # private network only

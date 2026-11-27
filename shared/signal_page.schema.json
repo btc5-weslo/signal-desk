@@ -1,0 +1,247 @@
+{
+  "$defs": {
+    "AssetClass": {
+      "enum": [
+        "crypto",
+        "equity",
+        "fx"
+      ],
+      "title": "AssetClass",
+      "type": "string"
+    },
+    "ExitReason": {
+      "enum": [
+        "tp",
+        "sl",
+        "timeout"
+      ],
+      "title": "ExitReason",
+      "type": "string"
+    },
+    "Side": {
+      "enum": [
+        "long",
+        "short",
+        "flat"
+      ],
+      "title": "Side",
+      "type": "string"
+    },
+    "Signal": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "strategy_id": {
+          "title": "Strategy Id",
+          "type": "string"
+        },
+        "strategy_version": {
+          "title": "Strategy Version",
+          "type": "string"
+        },
+        "symbol": {
+          "title": "Symbol",
+          "type": "string"
+        },
+        "asset_class": {
+          "$ref": "#/$defs/AssetClass"
+        },
+        "timeframe": {
+          "title": "Timeframe",
+          "type": "string"
+        },
+        "side": {
+          "$ref": "#/$defs/Side"
+        },
+        "generated_at": {
+          "description": "UTC ISO timestamp",
+          "format": "date-time",
+          "title": "Generated At",
+          "type": "string"
+        },
+        "bar_close_time": {
+          "description": "Signal uses data up to this bar close only",
+          "format": "date-time",
+          "title": "Bar Close Time",
+          "type": "string"
+        },
+        "entry": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Entry"
+        },
+        "stop_loss": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stop Loss"
+        },
+        "take_profit": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Take Profit",
+          "type": "array"
+        },
+        "horizon_bars": {
+          "minimum": 1,
+          "title": "Horizon Bars",
+          "type": "integer"
+        },
+        "confidence": {
+          "description": "Calibrated probability, not hype",
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "features_snapshot": {
+          "additionalProperties": true,
+          "title": "Features Snapshot",
+          "type": "object"
+        },
+        "rationale": {
+          "maxLength": 500,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/SignalStatus",
+          "default": "active"
+        },
+        "is_mock": {
+          "default": false,
+          "description": "True for placeholder data; never shown as real",
+          "title": "Is Mock",
+          "type": "boolean"
+        },
+        "confidence_calibrated": {
+          "default": false,
+          "description": "True only when confidence was calibrated on a named run",
+          "title": "Confidence Calibrated",
+          "type": "boolean"
+        },
+        "calibration_run_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Backtest/calibration run that calibrated confidence",
+          "title": "Calibration Run Id"
+        },
+        "exit_time": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "SignalExitTime"
+        },
+        "exit_price": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "SignalExitPrice"
+        },
+        "exit_reason": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ExitReason"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "SignalExitReason"
+        }
+      },
+      "required": [
+        "id",
+        "strategy_id",
+        "strategy_version",
+        "symbol",
+        "asset_class",
+        "timeframe",
+        "side",
+        "generated_at",
+        "bar_close_time",
+        "horizon_bars",
+        "confidence",
+        "rationale"
+      ],
+      "title": "Signal",
+      "type": "object"
+    },
+    "SignalStatus": {
+      "enum": [
+        "active",
+        "hit_tp",
+        "hit_sl",
+        "expired",
+        "cancelled"
+      ],
+      "title": "SignalStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "items": {
+      "items": {
+        "$ref": "#/$defs/Signal"
+      },
+      "title": "SignalItems",
+      "type": "array"
+    },
+    "next_cursor": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Next Cursor"
+    }
+  },
+  "required": [
+    "items"
+  ],
+  "title": "SignalPage",
+  "type": "object"
+}

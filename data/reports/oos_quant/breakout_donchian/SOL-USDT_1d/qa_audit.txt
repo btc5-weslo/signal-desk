@@ -1,0 +1,2 @@
+flags (expected by QA): ['low_oos_trades']; in report: ['low_oos_trades']
+OK

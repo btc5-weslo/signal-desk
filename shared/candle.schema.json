@@ -1,0 +1,55 @@
+{
+  "additionalProperties": false,
+  "description": "OHLCV bar. `time` is the bar open time (UTC). Never synthesize these.",
+  "properties": {
+    "time": {
+      "description": "Bar open time, UTC ISO",
+      "format": "date-time",
+      "title": "Time",
+      "type": "string"
+    },
+    "open": {
+      "title": "Open",
+      "type": "number"
+    },
+    "high": {
+      "title": "High",
+      "type": "number"
+    },
+    "low": {
+      "title": "Low",
+      "type": "number"
+    },
+    "close": {
+      "title": "Close",
+      "type": "number"
+    },
+    "volume": {
+      "title": "Volume",
+      "type": "number"
+    },
+    "source": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Vendor/store source of this bar, if recorded",
+      "title": "Source"
+    }
+  },
+  "required": [
+    "time",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume"
+  ],
+  "title": "Candle",
+  "type": "object"
+}

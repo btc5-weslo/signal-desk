@@ -1,0 +1,99 @@
+{
+  "symbol": "SOL-USDT",
+  "asset_class": "crypto",
+  "timeframe": "4h",
+  "source": "ccxt:binanceus",
+  "start": "2020-09-18T12:00:00Z",
+  "end": "2026-11-26T04:00:00Z",
+  "n_bars": 13554,
+  "n_duplicates_removed": 0,
+  "n_bad_ticks_dropped": 0,
+  "n_outliers_flagged": 35,
+  "n_zero_volume": 18,
+  "n_gaps_unexpected": 3,
+  "n_gaps_calendar": 0,
+  "missing_pct_estimate": 0.00029502876530462796,
+  "history_limitations": [],
+  "bad_tick_times": [],
+  "outlier_times": [
+    "2020-11-07T16:00:00Z",
+    "2020-11-26T00:00:00Z",
+    "2021-01-08T08:00:00Z",
+    "2021-01-09T16:00:00Z",
+    "2021-01-13T12:00:00Z",
+    "2021-01-15T08:00:00Z",
+    "2021-02-07T08:00:00Z",
+    "2021-02-08T04:00:00Z",
+    "2021-02-22T16:00:00Z",
+    "2021-02-28T16:00:00Z",
+    "2021-03-01T04:00:00Z",
+    "2021-04-18T04:00:00Z",
+    "2021-04-19T16:00:00Z",
+    "2021-04-24T16:00:00Z",
+    "2021-05-17T04:00:00Z",
+    "2021-05-19T08:00:00Z",
+    "2021-05-19T20:00:00Z",
+    "2021-05-20T04:00:00Z",
+    "2021-05-21T12:00:00Z",
+    "2021-05-25T12:00:00Z",
+    "2021-06-22T08:00:00Z",
+    "2021-06-22T12:00:00Z",
+    "2021-08-17T00:00:00Z",
+    "2021-09-08T16:00:00Z",
+    "2022-05-11T16:00:00Z",
+    "2022-05-13T00:00:00Z",
+    "2022-06-18T20:00:00Z",
+    "2022-06-20T08:00:00Z",
+    "2022-11-08T16:00:00Z",
+    "2022-11-09T04:00:00Z",
+    "2022-11-09T12:00:00Z",
+    "2022-11-09T16:00:00Z",
+    "2022-11-10T12:00:00Z",
+    "2023-01-14T00:00:00Z",
+    "2024-08-05T12:00:00Z"
+  ],
+  "gaps": [
+    {
+      "start": "2021-06-22T04:00:00Z",
+      "end": "2021-06-22T08:00:00Z",
+      "missing_bars_estimate": 1,
+      "kind": "unexpected"
+    },
+    {
+      "start": "2023-02-06T08:00:00Z",
+      "end": "2023-02-06T12:00:00Z",
+      "missing_bars_estimate": 1,
+      "kind": "unexpected"
+    },
+    {
+      "start": "2026-08-31T04:00:00Z",
+      "end": "2026-08-31T12:00:00Z",
+      "missing_bars_estimate": 2,
+      "kind": "unexpected"
+    }
+  ],
+  "fetch_attempts": [
+    {
+      "source": "ccxt:binance",
+      "ok": false,
+      "bars": 0,
+      "error": "skipped (earlier failure in this process, e.g. geo-block)",
+      "notes": []
+    },
+    {
+      "source": "ccxt:binanceus",
+      "ok": true,
+      "bars": 13555,
+      "error": null,
+      "notes": []
+    }
+  ],
+  "warnings": [
+    "dropped 1 still-forming bar(s) (close_time > as_of)",
+    "flagged 35 statistical outlier bar(s); prices kept as published",
+    "detected 3 unexpected gap(s)"
+  ],
+  "errors": [],
+  "dropped_forming_bars": 1,
+  "cleaned_at": "2026-11-26T04:17:49.186593Z"
+}

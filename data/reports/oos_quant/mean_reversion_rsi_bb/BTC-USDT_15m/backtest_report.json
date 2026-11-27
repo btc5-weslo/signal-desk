@@ -1,0 +1,374 @@
+{
+  "strategy_id": "mean_reversion_rsi_bb",
+  "version": "0.1.0",
+  "period": {
+    "start": "2024-03-23T14:00:00Z",
+    "end": "2026-09-09T14:00:00Z"
+  },
+  "oos_windows": [
+    {
+      "train_start": "2023-03-24T14:00:00Z",
+      "train_end": "2024-03-23T14:00:00Z",
+      "test_start": "2024-03-23T14:00:00Z",
+      "test_end": "2024-09-19T14:00:00Z",
+      "trades": 4,
+      "metrics": {
+        "win_rate": 0.75,
+        "profit_factor": 1.5699025631683345,
+        "sharpe": 0.5914844596807184,
+        "sortino": 0.0,
+        "max_drawdown": -0.008348229951382624,
+        "avg_R": 0.0778709157898752,
+        "exposure": 0.0010983928777893398
+      }
+    },
+    {
+      "train_start": "2023-09-20T14:00:00Z",
+      "train_end": "2024-09-19T14:00:00Z",
+      "test_start": "2024-09-19T14:00:00Z",
+      "test_end": "2025-03-18T14:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 0.3157070312859621,
+        "sharpe": -0.9287528356292188,
+        "sortino": 0.0,
+        "max_drawdown": -0.007807230465341264,
+        "avg_R": -0.5090034165139645,
+        "exposure": 0.00040467106023817784
+      }
+    },
+    {
+      "train_start": "2024-03-18T14:00:00Z",
+      "train_end": "2025-03-18T14:00:00Z",
+      "test_start": "2025-03-18T14:00:00Z",
+      "test_end": "2025-09-14T14:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.5,
+        "profit_factor": 0.18342263736826522,
+        "sharpe": -1.1431522383315027,
+        "sortino": 0.0,
+        "max_drawdown": -0.006004293397024907,
+        "avg_R": -0.7211194539905921,
+        "exposure": 0.0006359116660885651
+      }
+    },
+    {
+      "train_start": "2024-09-14T14:00:00Z",
+      "train_end": "2025-09-14T14:00:00Z",
+      "test_start": "2025-09-14T14:00:00Z",
+      "test_end": "2026-03-13T14:00:00Z",
+      "trades": 12,
+      "metrics": {
+        "win_rate": 0.25,
+        "profit_factor": 0.10155324251848001,
+        "sharpe": -3.3415736628788375,
+        "sortino": -0.15545217873180894,
+        "max_drawdown": -0.044669003368120075,
+        "avg_R": -1.145273717237086,
+        "exposure": 0.0018499248468030985
+      }
+    },
+    {
+      "train_start": "2025-03-13T14:00:00Z",
+      "train_end": "2026-03-13T14:00:00Z",
+      "test_start": "2026-03-13T14:00:00Z",
+      "test_end": "2026-09-09T14:00:00Z",
+      "trades": 2,
+      "metrics": {
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "sharpe": -1.4391772632537958,
+        "sortino": -0.01565201535417297,
+        "max_drawdown": -0.008058154784706839,
+        "avg_R": -0.7427489430832049,
+        "exposure": 0.00040467106023817784
+      }
+    }
+  ],
+  "trades": [
+    {
+      "symbol": "BTC-USDT",
+      "side": "long",
+      "entry_time": "2024-03-23T23:45:00Z",
+      "exit_time": "2024-03-24T00:00:00Z",
+      "entry_price": 64397.432624999994,
+      "exit_price": 63988.2136954883,
+      "exit_reason": "sl",
+      "r_multiple": -1.4252174146969845,
+      "bars_held": 1,
+      "net_return": -0.008348229951382782
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "short",
+      "entry_time": "2024-03-26T07:30:00Z",
+      "exit_time": "2024-03-26T07:45:00Z",
+      "entry_price": 71449.49738000002,
+      "exit_price": 71112.95896233902,
+      "exit_reason": "tp",
+      "r_multiple": 0.47540371171278933,
+      "bars_held": 1,
+      "net_return": 0.00271486810168875
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "long",
+      "entry_time": "2024-03-26T14:30:00Z",
+      "exit_time": "2024-03-26T15:00:00Z",
+      "entry_price": 69623.664435,
+      "exit_price": 70130.4118150746,
+      "exit_reason": "tp",
+      "r_multiple": 0.6312492190340527,
+      "bars_held": 2,
+      "net_return": 0.005271100089354752
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "long",
+      "entry_time": "2024-04-05T05:30:00Z",
+      "exit_time": "2024-04-05T08:15:00Z",
+      "entry_price": 66707.337,
+      "exit_price": 67182.76462510419,
+      "exit_reason": "tp",
+      "r_multiple": 0.6300481471096432,
+      "bars_held": 11,
+      "net_return": 0.005119939407550989
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "long",
+      "entry_time": "2024-09-20T13:45:00Z",
+      "exit_time": "2024-09-20T14:30:00Z",
+      "entry_price": 62769.419025,
+      "exit_price": 63049.95230673387,
+      "exit_reason": "tp",
+      "r_multiple": 0.4507044314498096,
+      "bars_held": 3,
+      "net_return": 0.0024647975527782116
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "long",
+      "entry_time": "2024-10-03T08:15:00Z",
+      "exit_time": "2024-10-03T08:45:00Z",
+      "entry_price": 60570.27,
+      "exit_price": 60218.1723851472,
+      "exit_reason": "sl",
+      "r_multiple": -1.4687112644777387,
+      "bars_held": 2,
+      "net_return": -0.007807230465341266
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "long",
+      "entry_time": "2025-03-21T07:45:00Z",
+      "exit_time": "2025-03-21T08:15:00Z",
+      "entry_price": 83836.06708499999,
+      "exit_price": 84096.33009879474,
+      "exit_reason": "tp",
+      "r_multiple": 0.26835834553027665,
+      "bars_held": 2,
+      "net_return": 0.0011013233304151666
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "long",
+      "entry_time": "2025-03-27T11:30:00Z",
+      "exit_time": "2025-03-27T13:15:00Z",
+      "entry_price": 86989.473,
+      "exit_price": 86640.79294760303,
+      "exit_reason": "sl",
+      "r_multiple": -1.7105972535114609,
+      "bars_held": 7,
+      "net_return": -0.006004293397024895
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "short",
+      "entry_time": "2025-09-20T08:00:00Z",
+      "exit_time": "2025-09-20T08:15:00Z",
+      "entry_price": 115910.57572000001,
+      "exit_price": 115845.58959400641,
+      "exit_reason": "tp",
+      "r_multiple": -0.9216121616564418,
+      "bars_held": 1,
+      "net_return": -0.0014387819082467917
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "short",
+      "entry_time": "2025-09-27T22:15:00Z",
+      "exit_time": "2025-09-27T22:30:00Z",
+      "entry_price": 109553.03608,
+      "exit_price": 109750.69920659025,
+      "exit_reason": "sl",
+      "r_multiple": -2.919625215690295,
+      "bars_held": 1,
+      "net_return": -0.003806073083838079
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "short",
+      "entry_time": "2025-09-27T22:30:00Z",
+      "exit_time": "2025-09-27T22:45:00Z",
+      "entry_price": 109645.12001500001,
+      "exit_price": 109608.37273911806,
+      "exit_reason": "tp",
+      "r_multiple": -1.2460548143254866,
+      "bars_held": 1,
+      "net_return": -0.0016645174618551274
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "short",
+      "entry_time": "2025-10-01T08:45:00Z",
+      "exit_time": "2025-10-01T09:00:00Z",
+      "entry_price": 115577.55231500001,
+      "exit_price": 116072.91641646349,
+      "exit_reason": "sl",
+      "r_multiple": -1.6622922624154206,
+      "bars_held": 1,
+      "net_return": -0.006290274846914084
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "short",
+      "entry_time": "2025-10-03T15:30:00Z",
+      "exit_time": "2025-10-03T15:45:00Z",
+      "entry_price": 121233.07314000001,
+      "exit_price": 121805.82071320314,
+      "exit_reason": "sl",
+      "r_multiple": -1.5937217272667177,
+      "bars_held": 1,
+      "net_return": -0.0067290752096522645
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "short",
+      "entry_time": "2025-10-03T15:45:00Z",
+      "exit_time": "2025-10-03T16:00:00Z",
+      "entry_price": 121639.15000000001,
+      "exit_price": 122234.5240120815,
+      "exit_reason": "sl",
+      "r_multiple": -1.5707797965740193,
+      "bars_held": 1,
+      "net_return": -0.006899486605205416
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "short",
+      "entry_time": "2025-10-03T16:00:00Z",
+      "exit_time": "2025-10-03T16:15:00Z",
+      "entry_price": 122196.91098,
+      "exit_price": 122837.07640246853,
+      "exit_reason": "sl",
+      "r_multiple": -1.5294293407497188,
+      "bars_held": 1,
+      "net_return": -0.007244040808821124
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "short",
+      "entry_time": "2025-10-05T02:30:00Z",
+      "exit_time": "2025-10-05T02:45:00Z",
+      "entry_price": 122792.48304500002,
+      "exit_price": 123142.10107359973,
+      "exit_reason": "sl",
+      "r_multiple": -2.0673329211751925,
+      "bars_held": 1,
+      "net_return": -0.004850073864049618
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "short",
+      "entry_time": "2025-10-10T13:45:00Z",
+      "exit_time": "2025-10-10T14:00:00Z",
+      "entry_price": 122197.880495,
+      "exit_price": 121871.72237417714,
+      "exit_reason": "tp",
+      "r_multiple": 0.18305468550977194,
+      "bars_held": 1,
+      "net_return": 0.0006717671175732187
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "long",
+      "entry_time": "2025-10-13T11:30:00Z",
+      "exit_time": "2025-10-13T11:45:00Z",
+      "entry_price": 113700.151665,
+      "exit_price": 114176.57278451456,
+      "exit_reason": "tp",
+      "r_multiple": 0.42121567443950375,
+      "bars_held": 1,
+      "net_return": 0.002185963619444809
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "long",
+      "entry_time": "2025-10-15T12:30:00Z",
+      "exit_time": "2025-10-15T13:45:00Z",
+      "entry_price": 111525.49487999998,
+      "exit_price": 112003.99211701965,
+      "exit_reason": "tp",
+      "r_multiple": 0.43217290341777354,
+      "bars_held": 5,
+      "net_return": 0.002286183534060847
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "long",
+      "entry_time": "2025-11-14T04:45:00Z",
+      "exit_time": "2025-11-14T06:45:00Z",
+      "entry_price": 97628.34977999999,
+      "exit_price": 96677.46875948727,
+      "exit_reason": "sl",
+      "r_multiple": -1.2688796303587866,
+      "bars_held": 8,
+      "net_return": -0.011730064490824893
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "short",
+      "entry_time": "2026-03-14T23:45:00Z",
+      "exit_time": "2026-03-15T00:30:00Z",
+      "entry_price": 71145.58941,
+      "exit_price": 71009.79439416062,
+      "exit_reason": "tp",
+      "r_multiple": -0.03073291881397676,
+      "bars_held": 3,
+      "net_return": -8.939932914361383e-05
+    },
+    {
+      "symbol": "BTC-USDT",
+      "side": "long",
+      "entry_time": "2026-03-18T11:45:00Z",
+      "exit_time": "2026-03-18T12:15:00Z",
+      "entry_price": 73149.626535,
+      "exit_price": 72712.52508454141,
+      "exit_reason": "sl",
+      "r_multiple": -1.4547649673524332,
+      "bars_held": 2,
+      "net_return": -0.007969467920648933
+    }
+  ],
+  "trade_count": 22,
+  "win_rate": 0.36363636363636365,
+  "profit_factor": 0.26976221677105694,
+  "sharpe": -1.447901913310365,
+  "sortino": -0.04070573429556849,
+  "max_drawdown": -0.06438175460676121,
+  "avg_R": -0.7898883895845934,
+  "exposure": 0.0008796296296296296,
+  "fees_bps": 10.0,
+  "slippage_bps": 5.0,
+  "run_id": "1b747cf2362e3b3b",
+  "data_hash": "bc2ceff7ce3d2682c596188122055b901c108000d558693a746e4ba5e321be86",
+  "symbol": "BTC-USDT",
+  "timeframe": "15m",
+  "flags": [
+    "low_oos_trades",
+    "data_quality_warning"
+  ]
+}

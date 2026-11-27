@@ -1,0 +1,881 @@
+{
+  "batch": "crypto_vision_staging",
+  "generated_at": "2026-11-26T05:03:48.996492+00:00",
+  "n_series_requested": 20,
+  "n_series_ok": 20,
+  "n_series_failed": 0,
+  "notes": [
+    "Backfill written only to staging/. store/ was not touched.",
+    "Source is binance_vision. CHECKSUM SHA-256 verified. 2025+ archives use microsecond timestamps (parsed, not dropped)."
+  ],
+  "series": [
+    {
+      "symbol": "BTC-USDT",
+      "asset_class": "crypto",
+      "timeframe": "15m",
+      "source": "binance_vision",
+      "n_bars": 324670,
+      "first_open": "2017-08-17T04:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 2929,
+      "n_zero_volume": 0,
+      "n_stale_bars": 60,
+      "n_stale_runs_gt_3": 30,
+      "n_gaps_unexpected": 42,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 30,
+      "missing_pct_estimate": 0.0017279972450435777,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 2929 statistical outlier bar(s); prices kept as published",
+        "kept 60 stale bar(s) in the raw store with is_stale=True (volume==0 and open==high==low==close); get_candles/load_closed drop them by default",
+        "detected 30 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 42 unexpected gap(s)",
+        "detected 30 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 324670,
+          "error": null,
+          "notes": [
+            "monthly_zips=111",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "BTC-USDT",
+      "asset_class": "crypto",
+      "timeframe": "1h",
+      "source": "binance_vision",
+      "n_bars": 81181,
+      "first_open": "2017-08-17T04:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 806,
+      "n_zero_volume": 0,
+      "n_stale_bars": 4,
+      "n_stale_runs_gt_3": 11,
+      "n_gaps_unexpected": 18,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 11,
+      "missing_pct_estimate": 0.0015619619225660797,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 806 statistical outlier bar(s); prices kept as published",
+        "kept 4 stale bar(s) in the raw store with is_stale=True (volume==0 and open==high==low==close); get_candles/load_closed drop them by default",
+        "detected 11 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 18 unexpected gap(s)",
+        "detected 11 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 81181,
+          "error": null,
+          "notes": [
+            "monthly_zips=111",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "BTC-USDT",
+      "asset_class": "crypto",
+      "timeframe": "4h",
+      "source": "binance_vision",
+      "n_bars": 20310,
+      "first_open": "2017-08-17T04:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 151,
+      "n_zero_volume": 0,
+      "n_stale_bars": 0,
+      "n_stale_runs_gt_3": 1,
+      "n_gaps_unexpected": 8,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 1,
+      "missing_pct_estimate": 0.0008363260687754837,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 151 statistical outlier bar(s); prices kept as published",
+        "detected 1 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 8 unexpected gap(s)",
+        "detected 1 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 20310,
+          "error": null,
+          "notes": [
+            "monthly_zips=111",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "BTC-USDT",
+      "asset_class": "crypto",
+      "timeframe": "1d",
+      "source": "binance_vision",
+      "n_bars": 3388,
+      "first_open": "2017-08-17T00:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 5,
+      "n_zero_volume": 0,
+      "n_stale_bars": 0,
+      "n_stale_runs_gt_3": 0,
+      "n_gaps_unexpected": 0,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 0,
+      "missing_pct_estimate": 0.0,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 5 statistical outlier bar(s); prices kept as published"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 3388,
+          "error": null,
+          "notes": [
+            "monthly_zips=111",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "ETH-USDT",
+      "asset_class": "crypto",
+      "timeframe": "15m",
+      "source": "binance_vision",
+      "n_bars": 324670,
+      "first_open": "2017-08-17T04:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 2283,
+      "n_zero_volume": 0,
+      "n_stale_bars": 154,
+      "n_stale_runs_gt_3": 32,
+      "n_gaps_unexpected": 102,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 32,
+      "missing_pct_estimate": 0.0017279972450435777,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 2283 statistical outlier bar(s); prices kept as published",
+        "kept 154 stale bar(s) in the raw store with is_stale=True (volume==0 and open==high==low==close); get_candles/load_closed drop them by default",
+        "detected 32 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 102 unexpected gap(s)",
+        "detected 32 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 324670,
+          "error": null,
+          "notes": [
+            "monthly_zips=111",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "ETH-USDT",
+      "asset_class": "crypto",
+      "timeframe": "1h",
+      "source": "binance_vision",
+      "n_bars": 81181,
+      "first_open": "2017-08-17T04:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 585,
+      "n_zero_volume": 0,
+      "n_stale_bars": 6,
+      "n_stale_runs_gt_3": 11,
+      "n_gaps_unexpected": 20,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 11,
+      "missing_pct_estimate": 0.0015619619225660797,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 585 statistical outlier bar(s); prices kept as published",
+        "kept 6 stale bar(s) in the raw store with is_stale=True (volume==0 and open==high==low==close); get_candles/load_closed drop them by default",
+        "detected 11 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 20 unexpected gap(s)",
+        "detected 11 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 81181,
+          "error": null,
+          "notes": [
+            "monthly_zips=111",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "ETH-USDT",
+      "asset_class": "crypto",
+      "timeframe": "4h",
+      "source": "binance_vision",
+      "n_bars": 20310,
+      "first_open": "2017-08-17T04:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 106,
+      "n_zero_volume": 0,
+      "n_stale_bars": 0,
+      "n_stale_runs_gt_3": 1,
+      "n_gaps_unexpected": 8,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 1,
+      "missing_pct_estimate": 0.0008363260687754837,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 106 statistical outlier bar(s); prices kept as published",
+        "detected 1 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 8 unexpected gap(s)",
+        "detected 1 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 20310,
+          "error": null,
+          "notes": [
+            "monthly_zips=111",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "ETH-USDT",
+      "asset_class": "crypto",
+      "timeframe": "1d",
+      "source": "binance_vision",
+      "n_bars": 3388,
+      "first_open": "2017-08-17T00:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 5,
+      "n_zero_volume": 0,
+      "n_stale_bars": 0,
+      "n_stale_runs_gt_3": 0,
+      "n_gaps_unexpected": 0,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 0,
+      "missing_pct_estimate": 0.0,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 5 statistical outlier bar(s); prices kept as published"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 3388,
+          "error": null,
+          "notes": [
+            "monthly_zips=111",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "SOL-USDT",
+      "asset_class": "crypto",
+      "timeframe": "15m",
+      "source": "binance_vision",
+      "n_bars": 220491,
+      "first_open": "2020-08-11T06:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 1248,
+      "n_zero_volume": 0,
+      "n_stale_bars": 13,
+      "n_stale_runs_gt_3": 10,
+      "n_gaps_unexpected": 0,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 10,
+      "missing_pct_estimate": 0.0004216080948754586,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 1248 statistical outlier bar(s); prices kept as published",
+        "kept 13 stale bar(s) in the raw store with is_stale=True (volume==0 and open==high==low==close); get_candles/load_closed drop them by default",
+        "detected 10 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 10 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 220491,
+          "error": null,
+          "notes": [
+            "monthly_zips=75",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "SOL-USDT",
+      "asset_class": "crypto",
+      "timeframe": "1h",
+      "source": "binance_vision",
+      "n_bars": 55127,
+      "first_open": "2020-08-11T06:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 280,
+      "n_zero_volume": 0,
+      "n_stale_bars": 3,
+      "n_stale_runs_gt_3": 2,
+      "n_gaps_unexpected": 8,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 2,
+      "missing_pct_estimate": 0.0003445399485003664,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 280 statistical outlier bar(s); prices kept as published",
+        "kept 3 stale bar(s) in the raw store with is_stale=True (volume==0 and open==high==low==close); get_candles/load_closed drop them by default",
+        "detected 2 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 8 unexpected gap(s)",
+        "detected 2 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 55127,
+          "error": null,
+          "notes": [
+            "monthly_zips=75",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "SOL-USDT",
+      "asset_class": "crypto",
+      "timeframe": "4h",
+      "source": "binance_vision",
+      "n_bars": 13787,
+      "first_open": "2020-08-11T04:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 38,
+      "n_zero_volume": 0,
+      "n_stale_bars": 0,
+      "n_stale_runs_gt_3": 0,
+      "n_gaps_unexpected": 0,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 0,
+      "missing_pct_estimate": 0.0,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 38 statistical outlier bar(s); prices kept as published"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 13787,
+          "error": null,
+          "notes": [
+            "monthly_zips=75",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "SOL-USDT",
+      "asset_class": "crypto",
+      "timeframe": "1d",
+      "source": "binance_vision",
+      "n_bars": 2298,
+      "first_open": "2020-08-11T00:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 5,
+      "n_zero_volume": 0,
+      "n_stale_bars": 0,
+      "n_stale_runs_gt_3": 0,
+      "n_gaps_unexpected": 0,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 0,
+      "missing_pct_estimate": 0.0,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 5 statistical outlier bar(s); prices kept as published"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 2298,
+          "error": null,
+          "notes": [
+            "monthly_zips=75",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "BNB-USDT",
+      "asset_class": "crypto",
+      "timeframe": "15m",
+      "source": "binance_vision",
+      "n_bars": 316923,
+      "first_open": "2017-11-06T03:45:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 3285,
+      "n_zero_volume": 0,
+      "n_stale_bars": 161,
+      "n_stale_runs_gt_3": 30,
+      "n_gaps_unexpected": 115,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 30,
+      "missing_pct_estimate": 0.001682117578128639,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 3285 statistical outlier bar(s); prices kept as published",
+        "kept 161 stale bar(s) in the raw store with is_stale=True (volume==0 and open==high==low==close); get_candles/load_closed drop them by default",
+        "detected 30 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 115 unexpected gap(s)",
+        "detected 30 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 316923,
+          "error": null,
+          "notes": [
+            "monthly_zips=108",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "BNB-USDT",
+      "asset_class": "crypto",
+      "timeframe": "1h",
+      "source": "binance_vision",
+      "n_bars": 79245,
+      "first_open": "2017-11-06T03:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 817,
+      "n_zero_volume": 0,
+      "n_stale_bars": 5,
+      "n_stale_runs_gt_3": 10,
+      "n_gaps_unexpected": 19,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 10,
+      "missing_pct_estimate": 0.0015120015120014818,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 817 statistical outlier bar(s); prices kept as published",
+        "kept 5 stale bar(s) in the raw store with is_stale=True (volume==0 and open==high==low==close); get_candles/load_closed drop them by default",
+        "detected 10 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 19 unexpected gap(s)",
+        "detected 10 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 79245,
+          "error": null,
+          "notes": [
+            "monthly_zips=108",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "BNB-USDT",
+      "asset_class": "crypto",
+      "timeframe": "4h",
+      "source": "binance_vision",
+      "n_bars": 19826,
+      "first_open": "2017-11-06T00:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 166,
+      "n_zero_volume": 0,
+      "n_stale_bars": 0,
+      "n_stale_runs_gt_3": 1,
+      "n_gaps_unexpected": 7,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 1,
+      "missing_pct_estimate": 0.00080637032557207,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 166 statistical outlier bar(s); prices kept as published",
+        "detected 1 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 7 unexpected gap(s)",
+        "detected 1 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 19826,
+          "error": null,
+          "notes": [
+            "monthly_zips=108",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "BNB-USDT",
+      "asset_class": "crypto",
+      "timeframe": "1d",
+      "source": "binance_vision",
+      "n_bars": 3307,
+      "first_open": "2017-11-06T00:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 18,
+      "n_zero_volume": 0,
+      "n_stale_bars": 0,
+      "n_stale_runs_gt_3": 0,
+      "n_gaps_unexpected": 0,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 0,
+      "missing_pct_estimate": 0.0,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 18 statistical outlier bar(s); prices kept as published"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 3307,
+          "error": null,
+          "notes": [
+            "monthly_zips=108",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "XRP-USDT",
+      "asset_class": "crypto",
+      "timeframe": "15m",
+      "source": "binance_vision",
+      "n_bars": 299868,
+      "first_open": "2018-05-04T08:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 2370,
+      "n_zero_volume": 0,
+      "n_stale_bars": 17,
+      "n_stale_runs_gt_3": 26,
+      "n_gaps_unexpected": 0,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 26,
+      "missing_pct_estimate": 0.0012922306298625008,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 2370 statistical outlier bar(s); prices kept as published",
+        "kept 17 stale bar(s) in the raw store with is_stale=True (volume==0 and open==high==low==close); get_candles/load_closed drop them by default",
+        "detected 26 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 26 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 299868,
+          "error": null,
+          "notes": [
+            "monthly_zips=102",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "XRP-USDT",
+      "asset_class": "crypto",
+      "timeframe": "1h",
+      "source": "binance_vision",
+      "n_bars": 74977,
+      "first_open": "2018-05-04T08:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 638,
+      "n_zero_volume": 0,
+      "n_stale_bars": 4,
+      "n_stale_runs_gt_3": 9,
+      "n_gaps_unexpected": 17,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 9,
+      "missing_pct_estimate": 0.001159010977299424,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 638 statistical outlier bar(s); prices kept as published",
+        "kept 4 stale bar(s) in the raw store with is_stale=True (volume==0 and open==high==low==close); get_candles/load_closed drop them by default",
+        "detected 9 stale/missing run(s) longer than 3 bars (sets data_quality_warning; gap_segments starts a new segment; dropping stale does not hide the hole)",
+        "detected 17 unexpected gap(s)",
+        "detected 9 gap(s) longer than 3x the bar interval (sets data_quality_warning; walk-forward must split around them)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 74977,
+          "error": null,
+          "notes": [
+            "monthly_zips=102",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "XRP-USDT",
+      "asset_class": "crypto",
+      "timeframe": "4h",
+      "source": "binance_vision",
+      "n_bars": 18757,
+      "first_open": "2018-05-04T08:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 140,
+      "n_zero_volume": 0,
+      "n_stale_bars": 0,
+      "n_stale_runs_gt_3": 0,
+      "n_gaps_unexpected": 7,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 0,
+      "missing_pct_estimate": 0.00047959074922732103,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 140 statistical outlier bar(s); prices kept as published",
+        "detected 7 unexpected gap(s)"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 18757,
+          "error": null,
+          "notes": [
+            "monthly_zips=102",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    },
+    {
+      "symbol": "XRP-USDT",
+      "asset_class": "crypto",
+      "timeframe": "1d",
+      "source": "binance_vision",
+      "n_bars": 3128,
+      "first_open": "2018-05-04T00:00:00+00:00",
+      "last_close": "2026-11-26T00:00:00+00:00",
+      "n_duplicates_removed": 0,
+      "n_bad_ticks_dropped": 0,
+      "n_outliers_flagged": 22,
+      "n_zero_volume": 0,
+      "n_stale_bars": 0,
+      "n_stale_runs_gt_3": 0,
+      "n_gaps_unexpected": 0,
+      "n_gaps_calendar": 0,
+      "n_gaps_gt_3x": 0,
+      "missing_pct_estimate": 0.0,
+      "dropped_forming_bars": 0,
+      "history_limitations": [
+        "History is whatever data.binance.vision published for this pair (first monthly archive through the latest daily file). No binanceus rows were merged."
+      ],
+      "warnings": [
+        "flagged 22 statistical outlier bar(s); prices kept as published"
+      ],
+      "errors": [],
+      "fetch_attempts": [
+        {
+          "source": "binance_vision",
+          "ok": true,
+          "bars": 3128,
+          "error": null,
+          "notes": [
+            "monthly_zips=102",
+            "daily_zips=25",
+            "checksums=sha256 verified"
+          ]
+        }
+      ],
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "fees_bps": 10.0,
+  "slippage_bps": 5.0,
+  "train_days": 365,
+  "test_days": 180,
+  "step_days": 180,
+  "train_bars": 35040,
+  "test_bars": 17280,
+  "params": "published_defaults",
+  "symbol": "ETH-USDT",
+  "timeframe": "15m",
+  "n_windows": 5,
+  "oos_bar_count": 86400
+}

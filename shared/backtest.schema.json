@@ -1,0 +1,318 @@
+{
+  "$defs": {
+    "BacktestFlag": {
+      "enum": [
+        "low_oos_trades",
+        "sharpe_gt_3",
+        "win_rate_gt_75",
+        "metric_recompute_mismatch",
+        "insufficient_oos_history",
+        "data_quality_warning",
+        "metric_undefined"
+      ],
+      "title": "BacktestFlag",
+      "type": "string"
+    },
+    "ExitReason": {
+      "enum": [
+        "tp",
+        "sl",
+        "timeout"
+      ],
+      "title": "ExitReason",
+      "type": "string"
+    },
+    "OOSWindow": {
+      "properties": {
+        "train_start": {
+          "format": "date-time",
+          "title": "Train Start",
+          "type": "string"
+        },
+        "train_end": {
+          "format": "date-time",
+          "title": "Train End",
+          "type": "string"
+        },
+        "test_start": {
+          "format": "date-time",
+          "title": "Test Start",
+          "type": "string"
+        },
+        "test_end": {
+          "format": "date-time",
+          "title": "Test End",
+          "type": "string"
+        },
+        "trades": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trades"
+        },
+        "metrics": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Metrics",
+          "type": "object"
+        }
+      },
+      "required": [
+        "train_start",
+        "train_end",
+        "test_start",
+        "test_end"
+      ],
+      "title": "OOSWindow",
+      "type": "object"
+    },
+    "Side": {
+      "enum": [
+        "long",
+        "short",
+        "flat"
+      ],
+      "title": "Side",
+      "type": "string"
+    },
+    "Trade": {
+      "additionalProperties": false,
+      "description": "One backtest trade. net_return and r_multiple are after fees and slippage.",
+      "properties": {
+        "symbol": {
+          "title": "Symbol",
+          "type": "string"
+        },
+        "side": {
+          "$ref": "#/$defs/Side"
+        },
+        "entry_time": {
+          "format": "date-time",
+          "title": "Entry Time",
+          "type": "string"
+        },
+        "exit_time": {
+          "format": "date-time",
+          "title": "Exit Time",
+          "type": "string"
+        },
+        "entry_price": {
+          "title": "Entry Price",
+          "type": "number"
+        },
+        "exit_price": {
+          "title": "Exit Price",
+          "type": "number"
+        },
+        "exit_reason": {
+          "$ref": "#/$defs/ExitReason"
+        },
+        "r_multiple": {
+          "title": "R Multiple",
+          "type": "number"
+        },
+        "bars_held": {
+          "minimum": 0,
+          "title": "Bars Held",
+          "type": "integer"
+        },
+        "net_return": {
+          "title": "Net Return",
+          "type": "number"
+        }
+      },
+      "required": [
+        "symbol",
+        "side",
+        "entry_time",
+        "exit_time",
+        "entry_price",
+        "exit_price",
+        "exit_reason",
+        "r_multiple",
+        "bars_held",
+        "net_return"
+      ],
+      "title": "Trade",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "strategy_id": {
+      "title": "Strategy Id",
+      "type": "string"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "period": {
+      "additionalProperties": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "title": "Period",
+      "type": "object"
+    },
+    "oos_windows": {
+      "items": {
+        "$ref": "#/$defs/OOSWindow"
+      },
+      "title": "Oos Windows",
+      "type": "array"
+    },
+    "trades": {
+      "description": "Full trade list; net_return is after fees and slippage",
+      "items": {
+        "$ref": "#/$defs/Trade"
+      },
+      "title": "Trades",
+      "type": "array"
+    },
+    "trade_count": {
+      "description": "len(trades); stored so callers do not have to count",
+      "minimum": 0,
+      "title": "Trade Count",
+      "type": "integer"
+    },
+    "win_rate": {
+      "title": "Win Rate",
+      "type": "number"
+    },
+    "profit_factor": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "null when undefined (no losing trades); see metric_undefined flag",
+      "title": "Profit Factor"
+    },
+    "sharpe": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "null when undefined (zero variance); see metric_undefined flag",
+      "title": "Sharpe"
+    },
+    "sortino": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "null when undefined (no/zero-variance downside); see metric_undefined flag",
+      "title": "Sortino"
+    },
+    "max_drawdown": {
+      "title": "Max Drawdown",
+      "type": "number"
+    },
+    "avg_R": {
+      "title": "Avg R",
+      "type": "number"
+    },
+    "exposure": {
+      "title": "Exposure",
+      "type": "number"
+    },
+    "fees_bps": {
+      "title": "Fees Bps",
+      "type": "number"
+    },
+    "slippage_bps": {
+      "title": "Slippage Bps",
+      "type": "number"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "data_hash": {
+      "title": "Data Hash",
+      "type": "string"
+    },
+    "symbol": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Per-market report symbol; null on the strategy summary",
+      "title": "BacktestSymbol"
+    },
+    "timeframe": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Per-market report timeframe; null on the strategy summary",
+      "title": "BacktestTimeframe"
+    },
+    "flags": {
+      "description": "QA leakage warnings populated by Data. Always present on API responses.",
+      "items": {
+        "$ref": "#/$defs/BacktestFlag"
+      },
+      "title": "Flags",
+      "type": "array"
+    }
+  },
+  "required": [
+    "strategy_id",
+    "version",
+    "period",
+    "oos_windows",
+    "trades",
+    "trade_count",
+    "win_rate",
+    "profit_factor",
+    "sharpe",
+    "sortino",
+    "max_drawdown",
+    "avg_R",
+    "exposure",
+    "fees_bps",
+    "slippage_bps",
+    "run_id",
+    "data_hash",
+    "flags"
+  ],
+  "title": "BacktestReport",
+  "type": "object"
+}
