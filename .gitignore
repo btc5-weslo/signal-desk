@@ -30,6 +30,7 @@ npm-debug.log*
 
 # Market data and local databases (rebuilt by deploy/bootstrap_data.py or ingest)
 *.parquet
+!data/tests/fixtures/*.parquet
 *.duckdb
 *.duckdb.wal
 *.db
