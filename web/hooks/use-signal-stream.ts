@@ -26,17 +26,31 @@ export function authFrame(token: string | null): string | null {
   return token ? JSON.stringify({ type: "auth", token }) : null;
 }
 
-/** User JWT if signed in; otherwise a short-lived stream token minted server-side from SIGNAL_API_KEY (dev). */
-async function resolveStreamToken(): Promise<string | null> {
+/**
+ * User JWT if signed in; otherwise a short-lived stream token minted server-side from SIGNAL_API_KEY.
+ * Returns "auth" only for a real credential rejection (401/403 from our route). Anything else
+ * (cold-starting free-tier backend, 502/503, network error) is "transient" and is retried with backoff.
+ */
+export type StreamTokenResult = { token: string } | { error: "auth" | "transient" };
+export function classifyStreamAuth(status: number, body: { available?: boolean; token?: string } | null): StreamTokenResult {
+  if (status === 401 || status === 403) return { error: "auth" };
+  if (status >= 200 && status < 300 && body?.available && body.token) return { token: body.token };
+  return { error: "transient" };
+}
+async function resolveStreamToken(): Promise<StreamTokenResult> {
   const jwt = getToken();
-  if (jwt) return jwt;
+  if (jwt) return { token: jwt };
   try {
     const res = await fetch("/api/stream-auth", { method: "POST", cache: "no-store" });
-    if (!res.ok) return null; // incl. 503 when backend lacks POST /v1/stream/token
-    const body = (await res.json()) as { available?: boolean; token?: string };
-    return body.available && body.token ? body.token : null;
+    let body: { available?: boolean; token?: string } | null = null;
+    try {
+      body = (await res.json()) as { available?: boolean; token?: string };
+    } catch {
+      body = null;
+    }
+    return classifyStreamAuth(res.status, body);
   } catch {
-    return null;
+    return { error: "transient" };
   }
 }
 
@@ -95,10 +109,16 @@ export function useSignalStream({
     const connect = async () => {
       if (disposed) return;
       setStatus(tries === 0 ? "connecting" : "reconnecting");
-      const frame = authFrame(await resolveStreamToken());
+      const tok = await resolveStreamToken();
       if (disposed) return;
+      if ("error" in tok) {
+        // Only a real credential rejection is "Sign in required"; a sleeping/cold backend is retried.
+        if (tok.error === "auth") setStatus("unauthorized");
+        else schedule();
+        return;
+      }
+      const frame = authFrame(tok.token);
       if (!frame) {
-        // No JWT and no server-minted stream token: don't open an unauthenticated socket.
         setStatus("unauthorized");
         return;
       }
