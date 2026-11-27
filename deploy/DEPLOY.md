@@ -44,3 +44,10 @@ directory" on (web imports `../shared` types).
 ## Local check
     SIGNAL_ENV=staging backend/.venv/bin/python deploy/bootstrap_data.py build --out /tmp/store
     docker build -f deploy/api.Dockerfile -t signal-api .
+
+## In-process scheduler (no worker on the free plan)
+With `SIGNAL_INPROCESS_SCHEDULER=1` the API runs one cycle every
+`SIGNAL_SCHEDULER_INTERVAL_SEC` (default 60): a sequential, small top-up of the newest
+closed bars from `ccxt:binanceus` for every series (`app/pipeline/topup.py`), then the same
+`run_pipeline` pass the arq cron uses. Cycles never overlap. The start-up top-up in
+`start-api.sh` is skipped in this mode. Signals are still served only for QA-approved markets.

@@ -27,6 +27,14 @@ services:
         value: "false"
       - key: SIGNAL_DATA_DIR
         value: /app/store
+      # No worker on the free plan: the API tops up the newest bars from
+      # ccxt:binanceus and runs the signal pipeline itself every minute.
+      - key: SIGNAL_INPROCESS_SCHEDULER
+        value: "1"
+      - key: SIGNAL_SCHEDULER_INTERVAL_SEC
+        value: "60"
+      - key: SIGNAL_PIPELINE_SYMBOLS
+        value: BTC-USDT,ETH-USDT,SOL-USDT,BNB-USDT,XRP-USDT
       - key: SIGNAL_JWT_SECRET
         generateValue: true
       - key: SIGNAL_REDIS_URL

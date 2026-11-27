@@ -45,6 +45,10 @@ class Settings(BaseSettings):
     trusted_proxies: Annotated[list[str], NoDecode] = list(DEFAULT_TRUSTED_PROXIES)
     # Dev-only: serve live signals that lack a QA-approved backtest for that market.
     serve_unapproved: bool = False
+    # Run the live pipeline inside the API process (hosts with no worker).
+    inprocess_scheduler: bool = False  # SIGNAL_INPROCESS_SCHEDULER
+    scheduler_interval_sec: int = 60  # SIGNAL_SCHEDULER_INTERVAL_SEC
+    inprocess_first_delay_s: int = 0
     pipeline_symbols: Annotated[list[str], NoDecode] = ["BTC-USDT"]
     pipeline_timeframes: Annotated[list[str], NoDecode] = ["15m", "1h", "4h", "1d"]
     # Platform allow-list. Tenants cannot set this. Never-licensed names are dropped.

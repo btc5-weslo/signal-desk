@@ -5,7 +5,8 @@
 set -eu
 cd /app
 : "${SIGNAL_DATA_DIR:?set SIGNAL_DATA_DIR}"
-if [ "${SIGNAL_REFRESH_ON_START:-1}" = "1" ]; then
+# Skipped when the API's in-process scheduler does the top-up itself.
+if [ "${SIGNAL_REFRESH_ON_START:-1}" = "1" ] && [ "${SIGNAL_INPROCESS_SCHEDULER:-0}" != "1" ]; then
   backend/.venv/bin/python deploy/bootstrap_data.py topup >/tmp/bootstrap.log 2>&1 &
 fi
 cd backend
